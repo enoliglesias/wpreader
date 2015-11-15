@@ -30,6 +30,7 @@ var RecipeService = function() {
         deferred.resolve(results);
         return deferred.promise();
     }
+
     var recipes = null;
 
     $.ajaxSetup({
@@ -40,16 +41,24 @@ var RecipeService = function() {
 
     $.ajax({
          type: 'GET',
-         url:"YOUR URL HERE",
+         url:"http://beginveganbegun.es/wp-json/wp/v2/posts",
          crossDomain: true,
          dataType: 'json',
          success:function(data){
-             recipes = data;
-             console.log("Recipes loaded");
+            recipes = data;
+            debugger;
+            $('#content').html(new RecipeListView(recipes).render().$el);
+            console.log("Recipes loaded");
          },
          error:function(){
              console.log("Error loading recipes");
          }
     });
 
+    this.getRecipes = function() {
+      var deferred = $.Deferred();
+      var results = recipes;
+      deferred.resolve(results);
+      return deferred.promise();
+    }
 }
