@@ -2,19 +2,19 @@
 (function () {
 
     /* ---------------------------------- Local Variables ---------------------------------- */
-    HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
+    // HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
     RecipeListView.prototype.template =  Handlebars.compile($("#recipe-list-tpl").html());
-    RecipeView.prototype.template = Handlebars.compile($("#recipe-tpl").html());
+    // RecipeView.prototype.template = Handlebars.compile($("#recipe-tpl").html());
 
     var service = new RecipeService();
     service.initialize().done(function () {
       router.addRoute('', function() {
-          $('body').html(new HomeView(service).render().$el);
+          $('#content').html(new RecipeListView(service.getRecipes()).render().$el);
       });
 
       router.addRoute('recipes/:id', function(id) {
           service.findById(parseInt(id)).done(function(recipe) {
-              $('body').html(new RecipeView(recipe).render().$el);
+              $('#content').html(new RecipeView(recipe).render().$el);
           });
       });
 

@@ -1,10 +1,11 @@
-var RecipeListView = function () {
+var RecipeListView = function (recipes) {
 
     var recipes;
 
     this.initialize = function() {
-        this.$el = $('<div/>');
-        this.render();
+        this.$el = $('#content');
+        if(recipes[0] !== undefined)
+            this.render();
     };
 
     this.setRecipes = function(list) {
