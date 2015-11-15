@@ -58,7 +58,7 @@
 .mm-panels,
 .mm-panels > .mm-panel {
   background: inherit;
-  border-color: inherit; }
+  background-color: #000; }
 
 .mm-panels > .mm-panel {
   background: inherit;
@@ -162,6 +162,7 @@ li.mm-vertical.mm-opened > .mm-panel {
 
 .mm-listview {
   font: inherit;
+  color: #FFF;
   font-size: 14px;
   line-height: 20px; }
   .mm-listview a,
@@ -172,7 +173,8 @@ li.mm-vertical.mm-opened > .mm-panel {
     .mm-listview > li, .mm-listview > li:after,
     .mm-listview > li .mm-next,
     .mm-listview > li .mm-next:before {
-      border-color: inherit; }
+      border-color: #FFF;
+      color: #FFF; }
     .mm-listview > li > a,
     .mm-listview > li > span {
       text-overflow: ellipsis;
@@ -290,7 +292,7 @@ li.mm-vertical.mm-opened > .mm-panel {
   color: rgba(0, 0, 0, 0.7); }
   .mm-menu .mm-navbar > *,
   .mm-menu .mm-navbar a {
-    color: rgba(0, 0, 0, 0.3); }
+    color: #FFF; }
   .mm-menu .mm-navbar .mm-btn:before, .mm-menu .mm-navbar .mm-btn:after {
     border-color: rgba(0, 0, 0, 0.3); }
   .mm-menu .mm-listview {
