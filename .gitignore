@@ -1,6 +1,7 @@
 /platforms
 /plugins
 /server
+/res
 /www/js/services/json
 /www/js/services/localstorage
 /www/js/services/websql
