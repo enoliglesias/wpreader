@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "oswald";
+    src: url("../res/fonts/oswald.ttf") format("opentype");
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 14px;
+}

@@ -37,8 +37,9 @@ p
 }
 a, a:link, a:active, a:visited, a:hover
 {
-	color: inherit;
-	text-decoration: underline;
+	color: #000;
+	text-decoration: none;
+	font-size: 16px;
 }
 
 nav:not(.mm-menu)
@@ -46,11 +47,14 @@ nav:not(.mm-menu)
 	display: none;
 }
 
-.header,
+.header {
+	text-align: center;
+}
+
 .content,
 .footer
 {
-	text-align: center;
+	text-align: left;
 }
 .header,
 .footer
@@ -61,6 +65,7 @@ nav:not(.mm-menu)
 	color: #fff;
 	line-height: 40px;
 	font-family: "oswald";
+	text-transform: uppercase;
 
 
 	-moz-box-sizing: border-box;
@@ -92,10 +97,6 @@ nav:not(.mm-menu)
 	position: absolute;
 	top: 0;
 	left: 10px;
-}
-.content
-{
-	padding: 150px 50px 50px 50px;
 }
 
 .aquamarina {
