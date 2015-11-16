@@ -31,34 +31,31 @@ var RecipeService = function() {
         return deferred.promise();
     }
 
-    var recipes = null;
 
-    $.ajaxSetup({
-        beforeSend: function(xhr) {
-            xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
-        }
-    });
+    this.printRecipes = function() {
+      if(recipes === null){
+        $.ajaxSetup({
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
+            }
+        });
 
-    $.ajax({
-         type: 'GET',
-         url:"http://beginveganbegun.es/wp-json/wp/v2/posts",
-         crossDomain: true,
-         dataType: 'json',
-         success:function(data){
-            recipes = data;
-            debugger;
-            $('#content').html(new RecipeListView(recipes).render().$el);
-            console.log("Recipes loaded");
-         },
-         error:function(){
-             console.log("Error loading recipes");
-         }
-    });
-
-    this.getRecipes = function() {
-      var deferred = $.Deferred();
-      var results = recipes;
-      deferred.resolve(results);
-      return deferred.promise();
+        $.ajax({
+             type: 'GET',
+             crossDomain: true,
+             dataType: 'json',
+             success:function(data){
+                recipes = data;
+                debugger;
+                new RecipeListView(recipes).render().$el;
+                console.log("Recipes loaded");
+             },
+             error:function(){
+                 console.log("Error loading recipes");
+             }
+        });
+      }else{
+        new RecipeListView(recipes).render().$el;
+      }
     }
 }
