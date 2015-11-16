@@ -46,7 +46,6 @@ var RecipeService = function() {
              dataType: 'json',
              success:function(data){
                 recipes = data;
-                debugger;
                 new RecipeListView(recipes).render().$el;
                 console.log("Recipes loaded");
              },
