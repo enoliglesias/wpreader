@@ -15,54 +15,6 @@
     </script>
 </head>
 <body>
-<!--
-<script id="home-tpl" type="text/template">
-    <header class="bar bar-nav">
-        <h1 class="title">Your app title</h1>
-    </header>
-    <div class="bar bar-standard bar-header-secondary">
-        <input class='search-key' type="search"/>
-    </div>
-    <div class="content"></div>
-</script>
-
-<script id="recipe-list-tpl" type="text/template">
-    <ul class="table-view">
-        {{#each this}}
-        <li class="table-view-cell media">
-            <a href="#recipes/{{ id }}">
-                <div class="media-body">
-                    <p>{{ title.rendered }}</p>
-                </div>
-            </a>
-        </li>
-        {{/each}}
-    </ul>
-</script>
-
-<script id="recipe-tpl" type="text/template">
-    <header class="bar bar-nav">
-        <a class="btn btn-link btn-nav pull-left" href="#">
-            <span class="icon icon-left-nav"></span>
-        </a>
-        <h1 class="title">{{ title.rendered }}</h1>
-    </header>
-    <div class="content">
-        <div class="card">
-            <ul class="table-view">
-                <li class="table-view-cell media">
-                    <div id="recipe-content-tpl" class="media-body">
-                        {{{ content.rendered }}}
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</script>
--->
-
-
-
 
 <div id="page">
     <div class="header">
@@ -73,9 +25,9 @@
 
 
         <script id="recipe-list-tpl" type="text/template">
-            <ul class="table-view">
+            <ul class="table-view recpie-table">
                 {{#each this}}
-                <li class="table-view-cell media">
+                <li class="table-view-cell media recipe-row">
                     <a href="#recipes/{{ id }}">
                         <div class="media-body">
                             <p>{{ title.rendered }}</p>
@@ -86,13 +38,31 @@
             </ul>
         </script>
 
+        <script id="recipe-tpl" type="text/template">
+            <header class="bar bar-nav">
+                <a class="btn btn-link btn-nav pull-left" href="#">
+                    <span class="icon icon-left-nav"></span>
+                </a>
+                <h1 class="title">{{ title.rendered }}</h1>
+            </header>
+            <div class="content">
+                <div class="card">
+                    <ul class="table-view">
+                        <li class="table-view-cell media">
+                            <div id="recipe-content-tpl" class="media-body">
+                                {{{ content.rendered }}}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </script>
+
     </div>
-
-
 
     <nav id="menu">
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="#about">About me</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
