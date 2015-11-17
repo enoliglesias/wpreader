@@ -3,66 +3,80 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link href="assets/ratchet/css/ratchet.css" rel="stylesheet">
-    <link href="assets/css/styles.css" rel="stylesheet">
+    <meta name="title" content="Begin Vegan Begun">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="assets/css/burger-menu.css" rel="stylesheet">
+    <link href="assets/css/jquery.mmenu.all.css" rel="stylesheet">
+
+    <script src="lib/jquery.js"></script>
+    <script src="lib/jquery.mmenu.min.all.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('nav#menu').mmenu();
+        });
+    </script>
 </head>
 <body>
 
-<script id="home-tpl" type="text/template">
-    <header class="bar bar-nav">
-        <h1 class="title">Your app title</h1>
-    </header>
-    <div class="bar bar-standard bar-header-secondary">
-        <input class='search-key' type="search"/>
 <div id="page">
     <div class="header">
         <a href="#menu"></a>
         Begin <span class="aquamarina">Vegan</span> Begun
     </div>
-    <div class="content"></div>
-</script>
 
-<script id="recipe-list-tpl" type="text/template">
-    <ul class="table-view">
-        {{#each this}}
-        <li class="table-view-cell media">
-            <a href="#recipes/{{ id }}">
-                <div class="media-body">
-                    <p>{{ title.rendered }}</p>
-                </div>
-            </a>
-        </li>
-        {{/each}}
-    </ul>
-</script>
+    <div class="content" id="content">
 
-<script id="recipe-tpl" type="text/template">
-    <header class="bar bar-nav">
-        <a class="btn btn-link btn-nav pull-left" href="#">
-            <span class="icon icon-left-nav"></span>
-        </a>
-        <h1 class="title">{{ title.rendered }}</h1>
-    </header>
-    <div class="content">
-        <div class="card">
-            <ul class="table-view">
-                <li class="table-view-cell media">
-                    <div id="recipe-content-tpl" class="media-body">
-                        {{{ content.rendered }}}
-                    </div>
+
+        <script id="recipe-list-tpl" type="text/template">
+            <ul class="table-view recpie-table">
+                {{#each this}}
+                <li class="table-view-cell media recipe-row">
+                    <a href="#recipes/{{ id }}">
+                        <div class="media-body">
+                            <p>{{ title.rendered }}</p>
+                        </div>
+                    </a>
                 </li>
+                {{/each}}
             </ul>
-        </div>
-    </div>
-</script>
+        </script>
 
-<script src="lib/fastclick.js"></script>
-<script src="lib/handlebars.js"></script>
-<script src="lib/jquery.js"></script>
+        <script id="recipe-tpl" type="text/template">
+            <header class="bar bar-nav">
+                <a class="btn btn-link btn-nav pull-left" href="#">
+                    <span class="icon icon-left-nav"></span>
+                </a>
+                <h1 class="title">{{ title.rendered }}</h1>
+            </header>
+            <div class="content">
+                <div class="card">
+                    <ul class="table-view">
+                        <li class="table-view-cell media">
+                            <div id="recipe-content-tpl" class="media-body">
+                                {{{ content.rendered }}}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </script>
+
+    </div>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script src="js/services/RecipeService.js"></script>
 <script src="lib/router.js"></script>
-<script src="js/services/memory/RecipeService.js"></script>
+<script src="lib/global.js"></script>
+<script src="lib/handlebars.js"></script>
 <script src="js/RecipeListView.js"></script>
-<script src="js/HomeView.js"></script>
 <script src="js/RecipeView.js"></script>
 <script src="js/app.js"></script>
 

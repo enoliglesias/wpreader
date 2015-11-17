@@ -40,9 +40,16 @@ var RecipeService = function() {
             }
         });
 
+<<<<<<< HEAD:www/js/services/memory/RecipeService.js
+<<<<<<< Updated upstream:www/js/services/memory/RecipeService.js
+=======
         $.ajax({
              type: 'GET',
              url:"http://beginveganbegun.es/wp-json/wp/v2/posts",
+=======
+        $.ajax({
+             type: 'GET',
+>>>>>>> features/burger-menu:www/js/services/RecipeService.js
              crossDomain: true,
              dataType: 'json',
              success:function(data){
@@ -58,4 +65,8 @@ var RecipeService = function() {
         new RecipeListView(recipes).render().$el;
       }
     }
+<<<<<<< HEAD:www/js/services/memory/RecipeService.js
+>>>>>>> Stashed changes:www/js/services/RecipeService.js
+=======
+>>>>>>> features/burger-menu:www/js/services/RecipeService.js
 }

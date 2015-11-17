@@ -1,9 +1,10 @@
 /platforms
 /plugins
 /server
-/www/res
+/res
 /www/js/services/json
 /www/js/services/localstorage
 /www/js/services/websql
 /www/assets/css/images
 /www/assets/pics
+/www/assets/res
