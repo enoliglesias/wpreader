@@ -42,6 +42,7 @@ var RecipeService = function() {
 
         $.ajax({
              type: 'GET',
+             url:"http://beginveganbegun.es/wp-json/wp/v2/posts",
              crossDomain: true,
              dataType: 'json',
              success:function(data){
