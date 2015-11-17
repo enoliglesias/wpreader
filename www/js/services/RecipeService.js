@@ -46,10 +46,13 @@ var RecipeService = function() {
         $.ajax({
              type: 'GET',
              url:"http://beginveganbegun.es/wp-json/wp/v2/posts",
+<<<<<<< HEAD
 =======
         $.ajax({
              type: 'GET',
 >>>>>>> features/burger-menu:www/js/services/RecipeService.js
+=======
+>>>>>>> features/burger-menu
              crossDomain: true,
              dataType: 'json',
              success:function(data){
