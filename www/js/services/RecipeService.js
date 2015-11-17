@@ -30,30 +30,16 @@ var RecipeService = function() {
         deferred.resolve(results);
         return deferred.promise();
     }
-    var recipes = null;
 
-    $.ajaxSetup({
-        beforeSend: function(xhr) {
-            xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
-        }
-    });
 
-    $.ajax({
-         type: 'GET',
-         url:"YOUR URL HERE",
-         crossDomain: true,
-         dataType: 'json',
-         success:function(data){
-             recipes = data;
-             console.log("Recipes loaded");
-         },
-         error:function(){
-             console.log("Error loading recipes");
-         }
-    });
+    this.printRecipes = function() {
+      if(recipes === null){
+        $.ajaxSetup({
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
+            }
+        });
 
-<<<<<<< Updated upstream:www/js/services/memory/RecipeService.js
-=======
         $.ajax({
              type: 'GET',
              url:"http://beginveganbegun.es/wp-json/wp/v2/posts",
@@ -72,5 +58,4 @@ var RecipeService = function() {
         new RecipeListView(recipes).render().$el;
       }
     }
->>>>>>> Stashed changes:www/js/services/RecipeService.js
 }
