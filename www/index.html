@@ -10,6 +10,9 @@
 
     <script src="lib/jquery.js"></script>
     <script src="lib/jquery.mmenu.min.all.js"></script>
+    <script src="lib/router.js"></script>
+    <script src="lib/global.js"></script>
+    <script src="lib/handlebars.js"></script>
     <script type="text/javascript">
         $(function() {
             $('nav#menu').mmenu();
@@ -17,6 +20,14 @@
     </script>
 </head>
 <body>
+
+    <div class="splash">
+        <div class="splash-text">
+            <p>Begin</p>
+            <p class="aquamarina">Vegan</p>
+            <p>Begun</p>
+        </div>
+    </div>
 
 <div id="page">
     <div class="header">
@@ -43,12 +54,9 @@
 
         <script id="recipe-tpl" type="text/template">
             <header class="bar bar-nav">
-                <a class="btn btn-link btn-nav pull-left" href="#">
-                    <span class="icon icon-left-nav"></span>
-                </a>
                 <h1 class="title">{{ title.rendered }}</h1>
             </header>
-            <div class="content">
+            <div class="recipe detail">
                 <div class="card">
                     <ul class="table-view">
                         <li class="table-view-cell media">
@@ -65,20 +73,25 @@
 
     <nav id="menu">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
         </ul>
     </nav>
 </div>
 
 <script src="js/services/RecipeService.js"></script>
-<script src="lib/router.js"></script>
-<script src="lib/global.js"></script>
-<script src="lib/handlebars.js"></script>
 <script src="js/RecipeListView.js"></script>
 <script src="js/RecipeView.js"></script>
 <script src="js/app.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(document).on( "click", "#menu a", function() {
+          href = $(this).attr("href");
+          location.replace(href);
+        });
+    });
+</script>
 
 </body>
 </html>
