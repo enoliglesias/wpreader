@@ -18,6 +18,10 @@
           });
       });
 
+      router.addRoute('about', function() {
+        $('#content').load("about.html");
+      });
+
       router.start();
     });
 
