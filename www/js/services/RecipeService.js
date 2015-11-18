@@ -34,6 +34,7 @@ var RecipeService = function() {
 
     this.printRecipes = function() {
       if(recipes === null){
+        $(".splash").show();
         $.ajaxSetup({
             beforeSend: function(xhr) {
                 xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
@@ -48,6 +49,7 @@ var RecipeService = function() {
              success:function(data){
                 recipes = data;
                 new RecipeListView(recipes).render().$el;
+                $(".splash").hide();
                 console.log("Recipes loaded");
              },
              error:function(){
