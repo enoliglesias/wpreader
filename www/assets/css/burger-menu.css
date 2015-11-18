@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
 html, body
 {
 	padding: 0;
@@ -6,8 +8,10 @@ html, body
 body
 {
 	background-color: #fff;
-	font-family: Arial, Helvetica, Verdana;
-	font-size: 14px;
+	font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
 	line-height: 22px;
 	color: #666;
 	position: relative;
@@ -25,7 +29,15 @@ h1, h2, h3, h4, h5, h6
 }
 h1, h2, h3
 {
+	color: #000;
 	font-size: 18px;
+}
+
+h1.title {
+	text-align: center;
+  font-size: 27px;
+  font-family: "oswald";
+  font-weight: normal;
 }
 h4, h5, h6
 {
@@ -34,6 +46,9 @@ h4, h5, h6
 p
 {
 	margin: 0 0 10px 0;
+}
+.detail a, .detail a:link, .detail a:active, .detail a:visited, .detail a:hover {
+	color: #00A498;
 }
 a, a:link, a:active, a:visited, a:hover
 {
@@ -60,8 +75,7 @@ nav:not(.mm-menu)
 .footer
 {
 	background: #000;
-	font-size: 16px;
-	font-weight: bold;
+	font-size: 27px;
 	color: #fff;
 	line-height: 40px;
 	font-family: "oswald";
