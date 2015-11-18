@@ -8,6 +8,10 @@ ul {
   padding-left: 14px;
 }
 
+.center {
+  text-align: center;
+}
+
 .splash {
   display: none;
   position: fixed;
