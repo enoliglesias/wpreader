@@ -41,23 +41,42 @@ var RecipeService = function() {
             }
         });
 
-        $.ajax({
+        var recipes_call = $.ajax({
+          type: 'GET',
+          url:"http://beginveganbegun.es/wp-json/wp/v2/posts",
+          crossDomain: true,
+          dataType: 'json',
+          success:function(data){
+            console.log("Recipes loaded");
+          },
+            error:function(){
+            console.log("Error loading recipes");
+          }
+        });
+
+        var images_call = $.ajax({
              type: 'GET',
-             url:"http://beginveganbegun.es/wp-json/wp/v2/posts",
+             url:"http://beginveganbegun.es/wp-json/wp/v2/media?per_page=3333",
              crossDomain: true,
              dataType: 'json',
              success:function(data){
-                recipes = data;
-                new RecipeListView(recipes).render().$el;
-                $(".splash").hide();
-                console.log("Recipes loaded");
+                console.log("Images loaded");
              },
              error:function(){
-                 console.log("Error loading recipes");
+                 console.log("Error loading images");
              }
+        });
+
+        $.when(recipes_call, images_call).then(function (recipes_response, images_response) {
+          recipes = recipes_response[0];
+          recipe_images = images_response[0];
+          new RecipeListView(recipes).render().$el;
+          $(".splash").hide();
+
         });
       }else{
         new RecipeListView(recipes).render().$el;
       }
+
     }
 }
