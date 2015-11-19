@@ -3,14 +3,26 @@
     src: url("../res/fonts/oswald.ttf") format("opentype");
 }
 
-ul.table-view.recpie-table {
+img {
+  width: 100%;
+}
+
+ul {
   list-style-type: none;
+  padding-left: 10px;
+}
+
+ul.table-view.recpie-table {
   margin: 0;
   padding: 0;
 }
 
 ul.recpie-table li {
-  padding: 15px 15px 5px 5px;
+  padding: 15px 15px 5px 10px;
+}
+
+.page-detail p:not(.image){
+  padding-left: 10px;
 }
 
 ul.recpie-table li:nth-child(odd) {
