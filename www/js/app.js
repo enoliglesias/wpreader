@@ -11,20 +11,24 @@
     var service = new RecipeService();
     service.initialize().done(function () {
       router.addRoute('', function() {
-          service.printRecipes();
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        service.printRecipes();
       });
 
       router.addRoute('recipes/:id', function(id) {
           service.findById(parseInt(id)).done(function(recipe) {
-              $('#content').html(new RecipeView(recipe).render().$el);
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+            $('#content').html(new RecipeView(recipe).render().$el);
           });
       });
 
       router.addRoute('about', function() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
         $('#content').load("about.html");
       });
 
       router.addRoute('recipe-list', function() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
         $('#content').load("recipe-list.html");
       });
 
