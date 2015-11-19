@@ -24,6 +24,10 @@
         $('#content').load("about.html");
       });
 
+      router.addRoute('recipe-list', function() {
+        $('#content').load("recipe-list.html");
+      });
+
       router.start();
     });
 
