@@ -3,9 +3,22 @@
     src: url("../res/fonts/oswald.ttf") format("opentype");
 }
 
-ul {
+ul.table-view.recpie-table {
   list-style-type: none;
-  padding-left: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+ul.recpie-table li {
+  padding: 15px 15px 5px 5px;
+}
+
+ul.recpie-table li:nth-child(odd) {
+  background-color: rgba(0, 164, 152, 0.15);
+}
+
+ul.recpie-table li:nth-child(even) {
+  background-color: white;
 }
 
 .center {
