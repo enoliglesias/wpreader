@@ -20,12 +20,10 @@ ul.recpie-table li {
   padding-left: 10px;
 }
 
-ul.recpie-table li:nth-child(odd) {
-  background-color: rgba(0, 164, 152, 0.15);
-}
-
-ul.recpie-table li:nth-child(even) {
-  background-color: white;
+ul.recpie-table li {
+  background-color: #FFF;
+  font-family: "oswald";
+  text-transform: uppercase;
 }
 
 .center {
