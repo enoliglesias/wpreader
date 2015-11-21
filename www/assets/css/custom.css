@@ -56,5 +56,6 @@ ul.recpie-table li:nth-child(even) {
   font-family: "oswald";
   font-size: 55px;
   line-height: 1;
+  text-transform: uppercase;
   transform: translate(-50%, -50%);
 }
