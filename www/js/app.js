@@ -27,7 +27,7 @@
         $('#content').load("about.html");
       });
 
-      router.addRoute('recipe-list', function() {
+      router.addRoute('salad-recipe-list', function() {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         $('#content').load("recipe-list.html");
       });
