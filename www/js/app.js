@@ -3,9 +3,13 @@
     RecipeListView.prototype.template =  Handlebars.compile($("#recipe-list-tpl").html());
     RecipeView.prototype.template = Handlebars.compile($("#recipe-tpl").html());
 
-    Handlebars.registerHelper('recipe_image', function(image_id) {
+    Handlebars.registerHelper('recipeImage', function(image_id) {
       var recipe_url = _.find(recipe_images, function(recipe){ return recipe.id == image_id; }).source_url;
-      return '<img src="' + recipe_url +'"/>'
+      return '<img class="list-image-recipe" src="' + recipe_url +'"/>';
+    });
+
+    Handlebars.registerHelper('recipeFav', function(recipe_id) {
+      return BVB.getFavSpanOnLoad(recipe_id);
     });
 
     var service = new RecipeService();
