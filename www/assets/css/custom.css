@@ -1,5 +1,10 @@
-img {
+img.list-image-recipe {
   width: 100%;
+}
+
+span.fav-star {
+  margin-left: 10px;
+  margin-top: 2px;
 }
 
 ul {
