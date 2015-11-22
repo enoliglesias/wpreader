@@ -10,7 +10,14 @@ span.fav-star {
 img#fav-star-img {
     height: 25px;
     position: relative;
+}
+
+.recipe-row img#fav-star-img {
     top: 3px;
+}
+
+.recipe.detail img#fav-star-img {
+    top: 2px;
 }
 
 ul {
