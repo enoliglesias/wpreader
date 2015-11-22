@@ -14,6 +14,7 @@
     <script src="lib/global.js"></script>
     <script src="lib/underscore.js"></script>
     <script src="lib/handlebars.js"></script>
+    <script src="lib/bvb.js"></script>
     <script src="lib/ready.js"></script>
     <script type="text/javascript">
         $(function() {
@@ -44,23 +45,31 @@
             <ul class="table-view recpie-table">
                 {{#each this}}
                 <li class="table-view-cell media recipe-row">
-                    <a href="#recipes/{{ id }}">
                         <div class="media-body">
-                            <p>{{ title.rendered }}</p>
-                            {{{recipe_image featured_image}}}
+                            <p>
+                                <a href="#recipes/{{ id }}">
+                                    {{ title.rendered }}
+                                </a>
+                                {{{ recipeFav id }}}
+                            </p>
+                            <a href="#recipes/{{ id }}">
+                                {{{ recipeImage featured_image }}}
+                            </a>
                         </div>
-                    </a>
                 </li>
                 {{/each}}
             </ul>
         </script>
 
         <script id="recipe-tpl" type="text/template">
-            <header class="bar bar-nav">
-                <h1 class="title">{{ title.rendered }}</h1>
+            <header class="bar bar-nav recipe detail">
+                <h1 class="title">
+                    {{ title.rendered }}
+                    {{{ recipeFav id }}}
+                </h1>
             </header>
             <div class="recipe detail">
-                {{{recipe_image featured_image}}}
+                {{{ recipeImage featured_image }}}
                 <div class="card">
                     <ul class="table-view">
                         <li class="table-view-cell media">
