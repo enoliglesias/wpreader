@@ -5,6 +5,10 @@ var BVB = (function () {
 
     "use strict";
 
+    function init(){
+        favs = localStorage.getObj("favs") || [];
+    }
+
     function getFavSpanOnLoad(recipe_id){
         var fav_action = _.contains(favs, recipe_id) ? "unfav" : "fav";
         var fav_image = _.contains(favs, recipe_id) ? fav_star_base64 : unfav_star_base64;
