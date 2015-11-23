@@ -2,6 +2,7 @@
 
     RecipeListView.prototype.template =  Handlebars.compile($("#recipe-list-tpl").html());
     RecipeView.prototype.template = Handlebars.compile($("#recipe-tpl").html());
+    FavListView.prototype.template = Handlebars.compile($("#fav-list-tpl").html());
 
     Handlebars.registerHelper('recipeImage', function(image_id) {
       var recipe_url = _.find(recipe_images, function(recipe){ return recipe.id == image_id; }).source_url;
@@ -34,6 +35,11 @@
       router.addRoute('salad-recipe-list', function() {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         $('#content').load("recipe-list.html");
+      });
+
+      router.addRoute('favs', function() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        new FavListView(recipes).render().$el;
       });
 
       router.start();
