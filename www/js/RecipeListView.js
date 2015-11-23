@@ -6,11 +6,6 @@ var RecipeListView = function (recipes) {
             this.render();
     };
 
-    this.setRecipes = function(list) {
-        recipes = list;
-        this.render();
-    }
-
     this.render = function() {
         this.$el.html(this.template(recipes));
         return this;
