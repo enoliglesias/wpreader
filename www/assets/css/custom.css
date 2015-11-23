@@ -1,5 +1,7 @@
-img.list-image-recipe {
+img.list-image-recipe,
+.about img {
   width: 100%;
+  height: auto;
 }
 
 span.fav-star {
