@@ -61,6 +61,32 @@
             </ul>
         </script>
 
+        <script id="fav-list-tpl" type="text/template">
+            {{#if this}}
+                <ul class="table-view recpie-table favs">
+                        {{#each this}}
+                            <li class="table-view-cell media recipe-row">
+                                    <div class="media-body">
+                                        <p>
+                                            <a href="#recipes/{{ id }}">
+                                                {{ title.rendered }}
+                                            </a>
+                                            {{{ recipeFav id }}}
+                                        </p>
+                                        <a href="#recipes/{{ id }}">
+                                            {{{ recipeImage featured_image }}}
+                                        </a>
+                                    </div>
+                            </li>
+                        {{/each}}
+                </ul>
+            {{else}}
+                <p class="title">No tienes recetas añadidas a favoritas</p>
+                <p class="title">Para añadirlas, sólo tienes que pulsar en la estrella</p>
+            {{/if}}
+        </script>
+
+
         <script id="recipe-tpl" type="text/template">
             <header class="bar bar-nav recipe detail">
                 <h1 class="title">
@@ -99,6 +125,7 @@
 <script src="js/services/RecipeService.js"></script>
 <script src="js/RecipeListView.js"></script>
 <script src="js/RecipeView.js"></script>
+<script src="js/FavListView.js"></script>
 <script src="js/app.js"></script>
 
 </body>
