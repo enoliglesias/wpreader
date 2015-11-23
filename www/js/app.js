@@ -5,8 +5,9 @@
     FavListView.prototype.template = Handlebars.compile($("#fav-list-tpl").html());
 
     Handlebars.registerHelper('recipeImage', function(image_id) {
-      var recipe_url = _.find(recipe_images, function(recipe){ return recipe.id == image_id; }).source_url;
-      return '<img class="list-image-recipe" src="' + recipe_url +'"/>';
+      var recipe = _.find(recipe_images, function(recipe){ return recipe.id == image_id; })
+      var recipe_url = recipe ? recipe.source_url : null;
+      return recipe_url ? '<img class="list-image-recipe" src="' + recipe_url +'"/>' : "";
     });
 
     Handlebars.registerHelper('recipeFav', function(recipe_id) {
