@@ -4,7 +4,10 @@ img.list-image-recipe {
 
 span.fav-star {
   margin-left: 10px;
-  margin-top: 2px;
+}
+
+.recipe-row span.fav-star{
+  float: right;
 }
 
 img#fav-star-img {
