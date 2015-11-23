@@ -25,10 +25,6 @@ img#fav-star-img {
     position: relative;
 }
 
-.recipe-row img#fav-star-img {
-    top: 3px;
-}
-
 .recipe.detail img#fav-star-img {
     top: 2px;
 }
