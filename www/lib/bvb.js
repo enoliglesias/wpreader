@@ -5,9 +5,15 @@ var BVB = (function () {
 
     "use strict";
 
+    function init(){
+        favs = localStorage.getObj("favs") || [];
+    }
+
     function getFavSpanOnLoad(recipe_id){
-        var fav_action = _.contains(favs, recipe_id) ? "unfav" : "fav";
-        var fav_image = _.contains(favs, recipe_id) ? fav_star_base64 : unfav_star_base64;
+        var recipe_in_favs = !_(localStorage.getObj("favs")).isNull() && _(localStorage.getObj("favs")).contains(recipe_id)
+
+        var fav_action = recipe_in_favs ? "unfav" : "fav";
+        var fav_image = recipe_in_favs ? fav_star_base64 : unfav_star_base64;
 
         return '<span class="fav-star" data-action="' + fav_action
       +'" data-recipe-id="' + recipe_id + '"><img id="fav-star-img" src="' + fav_image + '"/></span>'
@@ -20,18 +26,29 @@ var BVB = (function () {
         if (actual_action === "fav"){
             fav_action = "unfav";
             fav_image = fav_star_base64;
-            favs.push(recipe_id);
+            addFav(recipe_id);
         }else{
             fav_action = "fav";
             fav_image = unfav_star_base64;
-            favs.splice(favs.indexOf(recipe_id), 1)
+            removeFav(recipe_id);
         }
 
         return '<span class="fav-star" data-action="' + fav_action
       +'" data-recipe-id="' + recipe_id + '"><img id="fav-star-img" src="' + fav_image + '"/></span>'
     }
 
+    function addFav(recipe_id){
+        favs.push(recipe_id);
+        localStorage.setObj("favs", favs);
+    }
+
+    function removeFav(recipe_id){
+        favs.splice(favs.indexOf(recipe_id), 1)
+        localStorage.setObj("favs", favs);
+    }
+
     return {
+        init: init,
         getFavSpanOnLoad: getFavSpanOnLoad,
         getFavSpan: getFavSpan
     };
