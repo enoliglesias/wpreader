@@ -1,3 +1,127 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+html, body
+{
+  padding: 0;
+  margin: 0;
+}
+body
+{
+  background-color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #666;
+  position: relative;
+  -webkit-text-size-adjust: none;
+}
+body *
+{
+  text-shadow: none;
+}
+h1, h2, h3, h4, h5, h6
+{
+  line-height: 1;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+h1, h2, h3
+{
+  color: #000;
+  font-size: 18px;
+}
+
+h1.title {
+  text-align: center;
+  font-size: 27px;
+  font-family: "oswald";
+  font-weight: normal;
+}
+h4, h5, h6
+{
+  font-size: 16px;
+}
+p
+{
+  margin: 0 0 10px 0;
+}
+.detail a, .detail a:link, .detail a:active, .detail a:visited, .detail a:hover {
+  color: #00A498;
+}
+a, a:link, a:active, a:visited, a:hover
+{
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav:not(.mm-menu)
+{
+  display: none;
+}
+
+.header {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.content,
+.footer
+{
+  text-align: left;
+}
+.header,
+.footer
+{
+  background: #000;
+  font-size: 27px;
+  color: #fff;
+  line-height: 40px;
+  font-family: "oswald";
+  text-transform: uppercase;
+
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  padding: 0 50px;
+}
+.header.fixed
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.footer.fixed
+{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.header a
+{
+  background: center center no-repeat transparent;
+  background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC );
+
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+.aquamarina {
+    color: #00A498;
+}
+
 img.list-image-recipe,
 .about img {
   width: 100%;
@@ -78,4 +202,10 @@ ul.recpie-table li {
   line-height: 1;
   text-transform: uppercase;
   transform: translate(-50%, -50%);
+}
+
+#page {
+  position: absolute;
+  width: 100%;
+  top: 30px;
 }
