@@ -188,7 +188,7 @@ ul.recpie-table li {
   width: 100%;
   height: 100%;
   background-color: white;
-  z-index: 999;
+  z-index: 99999;
 }
 
 .splash-text {
