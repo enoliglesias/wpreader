@@ -38,6 +38,11 @@
         $('#content').load("recipe-list.html");
       });
 
+      router.addRoute('contact', function() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        $('#content').load("contact.html");
+      });
+
       router.addRoute('favs', function() {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         new FavListView(recipes).render().$el;
