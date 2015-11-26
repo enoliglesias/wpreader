@@ -205,7 +205,7 @@ ul.recpie-table li {
 }
 
 #page {
-  position: absolute;
+  position: relative;
   width: 100%;
   top: 30px;
 }
