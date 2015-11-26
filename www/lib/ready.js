@@ -13,4 +13,8 @@ $(document).ready(function() {
     $("span[data-recipe-id=" + recipe_id + "]").replaceWith(fav_span);
   });
 
+  $(document).on("click", "#burger_button", function(e) {
+    $("#menu").data( "mmenu" ).open();
+  });
+
 });
