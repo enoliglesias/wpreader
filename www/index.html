@@ -33,7 +33,7 @@
     </div>
 
     <div class="header">
-        <a href="#" id="burger_button"></a>
+        <a href="#menu" id="burger_button"></a>
         Begin <span class="aquamarina">Vegan</span> Begun
     </div>
     <div id="page">
@@ -105,6 +105,14 @@
                         {{ title.rendered }}
                         {{{ recipeFav id }}}
                     </h1>
+
+                    <div class="social-sharing">
+                        <p>Compartir:</p>
+                        <span class="twitter">
+                            <div class="addthis_sharing_toolbox" data-url="{{ link }}" data-title="{{ title.rendered }}"></div>
+                        </span>
+                    </div>
+
                 </header>
                 <div class="recipe detail">
                     {{{ recipeImage featured_image }}}
@@ -118,6 +126,7 @@
                         </ul>
                     </div>
                 </div>
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5659f92d64386dcd" async="async"></script>
             </script>
 
         </div>

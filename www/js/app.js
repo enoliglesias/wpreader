@@ -10,6 +10,12 @@
       return recipe_url ? '<img class="list-image-recipe" src="' + recipe_url +'"/>' : "";
     });
 
+    Handlebars.registerHelper('recipeImageUrl', function(image_id) {
+      var recipe = _.find(recipe_images, function(recipe){ return recipe.id == image_id; })
+      var recipe_url = recipe ? recipe.source_url : null;
+      return recipe_url ? recipe_url : "";
+    });
+
     Handlebars.registerHelper('recipeFav', function(recipe_id) {
       return BVB.getFavSpanOnLoad(recipe_id);
     });
@@ -25,6 +31,7 @@
           service.findById(parseInt(id)).done(function(recipe) {
             document.body.scrollTop = document.documentElement.scrollTop = 0;
             $('#content').html(new RecipeView(recipe).render().$el);
+            BVB.loadSocialSharing();
           });
       });
 
