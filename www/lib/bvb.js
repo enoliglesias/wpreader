@@ -37,11 +37,6 @@ var BVB = (function () {
       +'" data-recipe-id="' + recipe_id + '"><img id="fav-star-img" src="' + fav_image + '"/></span>'
     }
 
-
-    function loadSocialSharing(){
-        twttr.widgets.load();
-    }
-
     function addFav(recipe_id){
         favs.push(recipe_id);
         localStorage.setObj("favs", favs);
@@ -54,7 +49,6 @@ var BVB = (function () {
 
     return {
         init: init,
-        loadSocialSharing: loadSocialSharing,
         getFavSpanOnLoad: getFavSpanOnLoad,
         getFavSpan: getFavSpan
     };
