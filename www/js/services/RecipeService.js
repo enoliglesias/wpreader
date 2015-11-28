@@ -35,17 +35,15 @@ var RecipeService = function() {
     this.printRecipes = function() {
       if(recipes === null){
         $(".splash").show();
-        $.ajaxSetup({
-            beforeSend: function(xhr) {
-                xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
-            }
-        });
 
         var recipes_call = $.ajax({
           type: 'GET',
           url:"http://beginveganbegun.es/wp-json/wp/v2/posts",
           crossDomain: true,
           dataType: 'json',
+          beforeSend: function(xhr) {
+              xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
+          },
           success:function(data){
             console.log("Recipes loaded");
           },
@@ -59,6 +57,9 @@ var RecipeService = function() {
              url:"http://beginveganbegun.es/wp-json/wp/v2/media?per_page=3333",
              crossDomain: true,
              dataType: 'json',
+             beforeSend: function(xhr) {
+                 xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
+             },
              success:function(data){
                 console.log("Images loaded");
              },
