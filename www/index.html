@@ -16,7 +16,6 @@
     <script src="lib/handlebars.js"></script>
     <script src="lib/bvb.js"></script>
     <script src="lib/ready.js"></script>
-    <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
     <script type="text/javascript">
         $(function() {
             $('nav#menu').mmenu();
@@ -24,23 +23,6 @@
     </script>
 </head>
 <body>
-<script>window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
- 
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
- 
-  return t;
-}(document, "script", "twitter-wjs"));</script>
-<div id="twitter-wjs"></div>
 
     <div class="splash">
         <div class="splash-text">
@@ -127,13 +109,7 @@
                     <div class="social-sharing">
                         <p>Compartir:</p>
                         <span class="twitter">
-                            <a href="https://twitter.com/share" class="twitter-share-button"{count} data-text="{{ title.rendered }}" data-url="{{ link }}" data-via="beginveganbegun" data-size="large">Tweet</a>
-                        </span>
-
-                        <span class="pinterest">
-                            <a target="_blank" href="https://www.pinterest.com/pin/create/button/?url={{ recipeImageUrl featured_image }}" class="pin-it-button" data-pin-do="buttonPin" data-pin-href="{{ recipeImageUrl featured_image }}">
-                                <img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_28.png" />
-                            </a>
+                            <div class="addthis_sharing_toolbox" data-url="{{ link }}" data-title="{{ title.rendered }}"></div>
                         </span>
                     </div>
 
@@ -150,6 +126,7 @@
                         </ul>
                     </div>
                 </div>
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5659f92d64386dcd" async="async"></script>
             </script>
 
         </div>
