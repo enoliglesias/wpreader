@@ -16,6 +16,7 @@
     <script src="lib/handlebars.js"></script>
     <script src="lib/bvb.js"></script>
     <script src="lib/ready.js"></script>
+    <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
     <script type="text/javascript">
         $(function() {
             $('nav#menu').mmenu();
@@ -127,6 +128,12 @@
                         <p>Compartir:</p>
                         <span class="twitter">
                             <a href="https://twitter.com/share" class="twitter-share-button"{count} data-text="{{ title.rendered }}" data-url="{{ link }}" data-via="beginveganbegun" data-size="large">Tweet</a>
+                        </span>
+
+                        <span class="pinterest">
+                            <a target="_blank" href="https://www.pinterest.com/pin/create/button/?url={{ recipeImageUrl featured_image }}" class="pin-it-button" data-pin-do="buttonPin" data-pin-href="{{ recipeImageUrl featured_image }}">
+                                <img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_28.png" />
+                            </a>
                         </span>
                     </div>
 
