@@ -25,6 +25,7 @@
           service.findById(parseInt(id)).done(function(recipe) {
             document.body.scrollTop = document.documentElement.scrollTop = 0;
             $('#content').html(new RecipeView(recipe).render().$el);
+            BVB.loadSocialSharing();
           });
       });
 
