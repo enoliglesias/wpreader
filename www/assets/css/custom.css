@@ -316,3 +316,11 @@ input:focus, textarea:focus {
   margin-top:-4px;
   font-weight:700;
 }
+
+div.social-sharing {
+  margin-left: 10px;
+}
+
+div.social-sharing p{
+  font-family: "oswald";
+}
