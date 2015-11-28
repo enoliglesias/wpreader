@@ -324,3 +324,12 @@ div.social-sharing {
 div.social-sharing p{
   font-family: "oswald";
 }
+
+.social-sharing span {
+  float: left;
+  margin-left: 10px;
+}
+
+.social-sharing span.twitter {
+  margin-left: 0px;
+}
