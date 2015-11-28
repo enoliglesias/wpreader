@@ -17,4 +17,29 @@ $(document).ready(function() {
     $("#menu").data( "mmenu" ).open();
   });
 
+  $(document).on("click", "#send_contact_form", function(e){
+    e.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: 'url',
+        dataType: 'json',
+        crossDomain: false,
+        username:'api',
+        password: btoa('mailgun-key'),
+        data: {
+                from: 'Foo Bar <foo@bar.com>',
+                to: "user@email.com",
+                subject: 'Hello',
+                text: 'Hi!',
+              },
+        beforeSend: function(xhr) {
+          xhr.setRequestHeader("Authorization", "Basic " + btoa("api:mailgun-key"));
+        },
+        success:function(data){
+        },
+        error:function(data){
+        }
+    });
+  });
+
 });
