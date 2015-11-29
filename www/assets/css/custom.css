@@ -334,3 +334,8 @@ div.social-sharing p{
 .social-sharing .share-link.facebook {
   margin-left: 0px;
 }
+
+.social-sharing .share-link img {
+  width: 32px;
+  height: 32px;
+}
