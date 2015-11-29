@@ -27,6 +27,8 @@ var RecipeService = function() {
             var title = element.title.rendered;
             return title.toLowerCase().indexOf(searchKey.toLowerCase()) > -1;
         });
+        // Return no recipes when search key is empty
+        results = searchKey.length == 0 ? [] : results;
         deferred.resolve(results);
         return deferred.promise();
     }
