@@ -44,6 +44,11 @@
           });
       });
 
+      router.addRoute('search', function() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        $('#content').load("search.html");
+      });
+
       router.addRoute('about', function() {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         $('#content').load("about.html");
