@@ -2,7 +2,7 @@ var RecipeListView = function (recipes) {
 
     this.initialize = function() {
         this.$el = $('#content');
-        if(recipes[0] !== undefined)
+        if(recipes && recipes[0] !== undefined)
             this.render();
     };
 

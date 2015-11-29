@@ -288,6 +288,21 @@ ul.recpie-table li {
   background-repeat: no-repeat;
 }
 
+#search{
+  background-image: url(../../img/search.svg);
+  background-size: 30px 30px;
+  background-position: 11px 8px;
+  background-repeat: no-repeat;
+}
+
+#search:focus{
+  background-image: url(../../img/search.svg);
+  background-size: 30px 30px;
+  background-position: 8px 5px;
+  background-position: 11px 8px;
+  background-repeat: no-repeat;
+}
+
 textarea {
     width: 100%;
     height: 150px;
@@ -338,4 +353,30 @@ div.social-sharing p{
 .social-sharing .share-link img {
   width: 32px;
   height: 32px;
+}
+
+p.input {
+  margin: 0px 10px 0px 10px;
+}
+
+.page-search .list-image-recipe {
+  height: 50px;
+  width: auto;
+}
+
+a.page-search-link {
+  margin-bottom: 15px;
+  position: absolute;
+  margin-top: 18px;
+  margin-left: 8px;
+  width: 60%;
+}
+
+.page-search .recipe-row span.fav-star {
+  margin-top: 15px;
+}
+
+.large-title-link {
+  float: left;
+  width: 89%;
 }

@@ -1,8 +1,16 @@
 (function () {
 
+    // Variables
+
+    var service = new RecipeService();
+
+    // Templates
+
     RecipeListView.prototype.template =  Handlebars.compile($("#recipe-list-tpl").html());
     RecipeView.prototype.template = Handlebars.compile($("#recipe-tpl").html());
     FavListView.prototype.template = Handlebars.compile($("#fav-list-tpl").html());
+
+    // Helpers
 
     Handlebars.registerHelper('recipeImage', function(image_id) {
       var recipe = _.find(recipe_images, function(recipe){ return recipe.id == image_id; })
@@ -20,7 +28,9 @@
       return BVB.getFavSpanOnLoad(recipe_id);
     });
 
-    var service = new RecipeService();
+    // Routes
+
+
     service.initialize().done(function () {
       router.addRoute('', function() {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
@@ -32,6 +42,11 @@
             document.body.scrollTop = document.documentElement.scrollTop = 0;
             $('#content').html(new RecipeView(recipe).render().$el);
           });
+      });
+
+      router.addRoute('search', function() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        $('#content').load("search.html");
       });
 
       router.addRoute('about', function() {
