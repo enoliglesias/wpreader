@@ -1,0 +1,42 @@
+<div class="page-search">
+
+  <h1 class="title">Buscar recetas</h1>
+
+  <div class="search-field">
+    <p class="search input">
+      <input name="search" type="text" class="search-key feedback-input" placeholder="Introduce nombre de receta..." id="search" />
+    </p>
+  </div>
+
+  <div class="content search-content" id="search-content">
+    <script id="recipe-search-tpl" type="text/template">
+        <ul class="table-view recpie-table">
+            {{#each this}}
+            <li class="table-view-cell media recipe-row">
+                    <div class="media-body">
+                        <p>
+                          <a class="page-search-image-link" href="#recipes/{{ id }}">
+                              {{{ recipeImage featured_image }}}
+                          </a>
+                            <a class="page-search-link" href="#recipes/{{ id }}">
+                                {{ title.rendered }}
+                            </a>
+                            {{{ recipeFav id }}}
+                        </p>
+                    </div>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+
+  </div>
+
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  var service = new RecipeService();
+  RecipeSearchListView.prototype.template = Handlebars.compile($("#recipe-search-tpl").html());
+  new RecipeSearchView(recipes, service).render();
+});
+</script>
