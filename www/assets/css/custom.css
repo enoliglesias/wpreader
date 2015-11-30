@@ -158,20 +158,24 @@ ul {
   padding-left: 10px;
 }
 
-ul.table-view.recpie-table {
+ul.table-view.recipe-table {
   margin: 0;
   padding: 0;
 }
 
-ul.recpie-table li {
+ul.recipe-table.large li {
   padding: 15px 15px 5px 10px;
+}
+
+ul.recipe-table.mini li{
+  padding: 0px 0px 5px 10px;
 }
 
 .page-detail p:not(.image){
   padding-left: 10px;
 }
 
-ul.recpie-table li {
+ul.recipe-table li {
   background-color: #FFF;
   font-family: "oswald";
   text-transform: uppercase;
@@ -359,12 +363,14 @@ p.input {
   margin: 0px 10px 0px 10px;
 }
 
-.page-search .list-image-recipe {
+.page-search .list-image-recipe,
+.favs .list-image-recipe {
   height: 50px;
   width: auto;
 }
 
-a.page-search-link {
+a.page-search-link,
+a.page-favs-link {
   margin-bottom: 15px;
   position: absolute;
   margin-top: 18px;
@@ -372,7 +378,8 @@ a.page-search-link {
   width: 60%;
 }
 
-.page-search .recipe-row span.fav-star {
+.page-search .recipe-row span.fav-star,
+.favs .recipe-row span.fav-star {
   margin-top: 15px;
 }
 
