@@ -45,7 +45,7 @@ var RecipeService = function() {
 
         var recipes_call = $.ajax({
           type: 'GET',
-          url:"http://beginveganbegun.es/wp-json/wp/v2/posts",
+          url:"http://beginveganbegun.es/wp-json/wp/v2/posts?per_page=3333",
           crossDomain: true,
           dataType: 'json',
           success:function(data){
@@ -72,7 +72,7 @@ var RecipeService = function() {
         $.when(recipes_call, images_call).then(function (recipes_response, images_response) {
           recipes = recipes_response[0];
           recipe_images = images_response[0];
-          new RecipeListView(recipes).render().$el;
+          new RecipeListView(recipes.slice(0,9)).render().$el;
           $(".splash").hide();
 
         });
