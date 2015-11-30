@@ -55,7 +55,7 @@
 
 
             <script id="recipe-list-tpl" type="text/template">
-                <ul class="table-view recpie-table">
+                <ul class="table-view recipe-table large">
                     {{#each this}}
                     <li class="table-view-cell media recipe-row">
                             <div class="media-body">
@@ -77,19 +77,19 @@
             <script id="fav-list-tpl" type="text/template">
                 {{#if this}}
                     <h1 class="title">Favoritas</h1>
-                    <ul class="table-view recpie-table favs">
+                    <ul class="table-view recipe-table mini favs">
                             {{#each this}}
                                 <li class="table-view-cell media recipe-row">
                                         <div class="media-body">
                                             <p>
-                                                <a class="large-title-link" href="#recipes/{{ id }}">
+                                                <a href="#recipes/{{ id }}">
+                                                    {{{ recipeImage featured_image }}}
+                                                </a>
+                                                <a class="page-favs-link" href="#recipes/{{ id }}">
                                                     {{ title.rendered }}
                                                 </a>
                                                 {{{ recipeFav id }}}
                                             </p>
-                                            <a href="#recipes/{{ id }}">
-                                                {{{ recipeImage featured_image }}}
-                                            </a>
                                         </div>
                                 </li>
                             {{/each}}
