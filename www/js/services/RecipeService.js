@@ -77,7 +77,7 @@ var RecipeService = function() {
 
         });
       }else{
-        new RecipeListView(recipes).render().$el;
+        new RecipeListView(recipes.slice(0,9)).render().$el;
       }
 
     }
