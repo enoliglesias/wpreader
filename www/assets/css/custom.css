@@ -387,3 +387,18 @@ a.page-favs-link {
   float: left;
   width: 89%;
 }
+
+li.close-cross {
+  text-align: right;
+  top: -32px;
+  right: 8px;
+}
+
+.mm-listview > li.close-cross:not(.mm-divider):after {
+  border-bottom-style: none;
+}
+
+li.close-cross img {
+  width: 22px;
+  height: auto;
+}
