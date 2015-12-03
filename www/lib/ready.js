@@ -13,4 +13,9 @@ $(document).ready(function() {
     $("span[data-recipe-id=" + recipe_id + "]").replaceWith(fav_span);
   });
 
+  $(document).on("click", "#close_menu_cross", function(){
+    var api = $("#menu").data( "mmenu" );
+    api.close();
+  });
+
 });
