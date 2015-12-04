@@ -18,4 +18,36 @@ $(document).ready(function() {
     api.close();
   });
 
+  $(document).on("click", "#send_contact_form", function(e){
+    var attributes_arr = _($("#contact_form").serializeArray())
+    var value_arr = attributes_arr.pluck("value");
+    if (_(value_arr).includes("")){
+      alert("Por favor, rellena todos los campos :)");
+      return false;
+    }
+    e.preventDefault();
+    $.ajaxSetup({
+       beforeSend: function(xhr) {
+           xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
+       }
+    });
+
+    $.ajax({
+       type: 'GET',
+       url: 'endpoint',
+       beforeSend: function(xhr) {
+        xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
+       },
+       data: {
+               name: _(attributes_arr).find({name: "name"}).value,
+               from: _(attributes_arr).find({name: "email"}).value,
+               to: "your@email.com",
+               comment: _(attributes_arr).find({name: "comment"}).value,
+             },
+       always:function(data){
+        $("input[type=text], textarea").val("");
+       },
+    });
+  });
+
 });
