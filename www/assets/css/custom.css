@@ -319,7 +319,7 @@ input:focus, textarea:focus {
   background-color:white;
 }
 
-#button-blue{
+.button-blue{
   font-family: 'oswald';
   float:left;
   width: 100%;
