@@ -314,12 +314,7 @@ textarea {
     resize:vertical;
 }
 
-input:hover, textarea:hover,
-input:focus, textarea:focus {
-  background-color:white;
-}
-
-.button-blue{
+.send-contact-btn{
   font-family: 'oswald';
   float:left;
   width: 100%;
@@ -329,9 +324,6 @@ input:focus, textarea:focus {
   font-size:24px;
   padding-top:22px;
   padding-bottom:22px;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
   margin-top:-4px;
   font-weight:700;
 }
