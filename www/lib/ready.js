@@ -26,11 +26,6 @@ $(document).ready(function() {
       return false;
     }
     e.preventDefault();
-    $.ajaxSetup({
-       beforeSend: function(xhr) {
-           xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
-       }
-    });
 
     $.ajax({
        type: 'GET',
