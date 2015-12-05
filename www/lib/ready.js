@@ -39,9 +39,9 @@ $(document).ready(function() {
                to: "your@email.com",
                comment: _(attributes_arr).find({name: "comment"}).value,
              },
-       always:function(data){
-        $("input[type=text], textarea").val("");
-       },
+    })
+    .always(function(){
+      $("input[type=text], textarea").val("");
     });
   });
 
