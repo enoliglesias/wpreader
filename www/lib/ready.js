@@ -27,12 +27,15 @@ $(document).ready(function() {
     }
     e.preventDefault();
 
+    $.ajaxSetup({
+       beforeSend: function(xhr) {
+           xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
+       }
+    });
+
     $.ajax({
        type: 'GET',
        url: 'endpoint',
-       beforeSend: function(xhr) {
-        xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
-       },
        data: {
                name: _(attributes_arr).find({name: "name"}).value,
                from: _(attributes_arr).find({name: "email"}).value,
