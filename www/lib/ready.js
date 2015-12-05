@@ -29,7 +29,8 @@ $(document).ready(function() {
 
     $.ajaxSetup({
        beforeSend: function(xhr) {
-           xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
+           xhr.setRequestHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Origin');
+           xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
        }
     });
 
