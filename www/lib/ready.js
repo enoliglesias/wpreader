@@ -40,7 +40,6 @@ $(document).ready(function() {
        data: {
                name: _(attributes_arr).find({name: "name"}).value,
                from: _(attributes_arr).find({name: "email"}).value,
-               to: "your@email.com",
                comment: _(attributes_arr).find({name: "comment"}).value,
              },
     })
