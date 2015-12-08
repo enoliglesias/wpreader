@@ -45,6 +45,7 @@ $(document).ready(function() {
     })
     .always(function(){
       $("input[type=text], textarea").val("");
+      alert("¡Tu mensaje ha sido enviado, gracias!");
     });
   });
 
