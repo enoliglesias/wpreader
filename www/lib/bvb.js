@@ -7,6 +7,11 @@ var BVB = (function () {
 
     function init(){
         favs = localStorage.getObj("favs") || [];
+        registered = localStorage.getObj("registered") || false;
+        if( !registered ){
+            $.post( "endpoint", { token: "token", attributes: {uuid: "foo", model: "bar", manufacturer: "baz", platform: "baf", version: "bat"} } );
+            localStorage.setObj("registered", true)
+        }
     }
 
     function getFavSpanOnLoad(recipe_id){
