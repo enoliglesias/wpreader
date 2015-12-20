@@ -7,10 +7,18 @@ var BVB = (function () {
 
     function init(){
         favs = localStorage.getObj("favs") || [];
-        registered = localStorage.getObj("registered") || false;
-        if( !registered ){
-            $.post( "endpoint", { token: "token", attributes: {uuid: "foo", model: "bar", manufacturer: "baz", platform: "baf", version: "bat"} } );
-            localStorage.setObj("registered", true)
+        intervalReadyID = window.setInterval(checkDeviceReady, 500);
+    }
+
+    function checkDeviceReady(){
+        console.log("checking if device ready");
+        if(device){
+            clearInterval(intervalReadyID);
+            registered = localStorage.getObj("registered") || false;
+            $.post( "endpoint", { token: "token", attributes: {uuid: device.uuid, model: device.model, manufacturer: device.manufacturer, platform: device.platform, version: device.version} } );
+            if( !registered ){
+                localStorage.setObj("registered", true)
+            }
         }
     }
 
