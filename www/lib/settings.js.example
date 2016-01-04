@@ -1,0 +1,4 @@
+var Settings = {
+  pushificator_endpoint: "modify this",
+  pushificator_token: "modify this"
+};
