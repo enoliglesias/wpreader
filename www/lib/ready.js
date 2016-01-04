@@ -36,8 +36,9 @@ $(document).ready(function() {
 
     $.ajax({
        type: 'GET',
-       url: 'endpoint',
+       url: Settings.send_email_endpoint,
        data: {
+               bvb: btoa(Settings.send_email_password + _(attributes_arr).find({name: "email"}).value),
                name: _(attributes_arr).find({name: "name"}).value,
                from: _(attributes_arr).find({name: "email"}).value,
                comment: _(attributes_arr).find({name: "comment"}).value,
