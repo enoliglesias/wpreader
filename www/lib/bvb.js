@@ -16,7 +16,7 @@ var BVB = (function () {
             clearInterval(intervalReadyID);
             registered = localStorage.getObj("registered") || false;
             if( !registered ){
-                $.post( "endpoint", { token: "token", attributes: {uuid: device.uuid, model: device.model, manufacturer: device.manufacturer, platform: device.platform, version: device.version} } );
+                $.post( Settings.pushificator_endpoint, { token: Settings.pushificator_token, attributes: {uuid: device.uuid, model: device.model, manufacturer: device.manufacturer, platform: device.platform, version: device.version} } );
                 localStorage.setObj("registered", true)
             }
         }
