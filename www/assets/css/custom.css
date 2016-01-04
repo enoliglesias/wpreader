@@ -393,4 +393,5 @@ li.close-cross {
 li.close-cross img {
   width: 22px;
   height: auto;
+  cursor: pointer;
 }
