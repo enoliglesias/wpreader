@@ -1,4 +1,6 @@
 var Settings = {
   pushificator_endpoint: "modify this",
-  pushificator_token: "modify this"
+  pushificator_token: "modify this",
+  send_email_endpoint: "modify this",
+  send_email_password: "modify this"
 };
