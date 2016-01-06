@@ -4,5 +4,6 @@ var Settings = {
   send_email_endpoint: "modify this",
   send_email_password: "modify this"
   fav_star_base64: "modify this",
-  unfav_star_base64: "modify this"
+  unfav_star_base64: "modify this",
+  recipes_in_home: 10
 };
