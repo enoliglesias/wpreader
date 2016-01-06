@@ -35,50 +35,64 @@ var RecipeService = function() {
 
 
     this.printRecipes = function() {
-      if(recipes === null){
-        $(".splash").show();
-        $.ajaxSetup({
-            beforeSend: function(xhr) {
-                xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
-            }
-        });
-
-        var recipes_call = $.ajax({
-          type: 'GET',
-          url:"http://beginveganbegun.es/wp-json/wp/v2/posts?per_page=3333",
-          crossDomain: true,
-          dataType: 'json',
-          success:function(data){
-            console.log("Recipes loaded");
-          },
-            error:function(){
-            console.log("Error loading recipes");
+      recipes = localStorage.getObj("recipes") || [];
+      recipe_images = localStorage.getObj("recipe_images") || [];
+      $(".splash").show();
+      $.ajaxSetup({
+          beforeSend: function(xhr) {
+              xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
           }
-        });
+      });
 
-        var images_call = $.ajax({
-             type: 'GET',
-             url:"http://beginveganbegun.es/wp-json/wp/v2/media?per_page=3333",
-             crossDomain: true,
-             dataType: 'json',
-             success:function(data){
-                console.log("Images loaded");
-             },
-             error:function(){
-                 console.log("Error loading images");
-             }
-        });
+      var recipes_call = $.ajax({
+        type: 'GET',
+        url:"http://beginveganbegun.es/wp-json/wp/v2/posts?filter[date_query][after]=2010-12-03&per_page=3333",
+        crossDomain: true,
+        dataType: 'json',
+        success:function(data){
+          console.log("Recipes loaded");
+        },
+          error:function(){
+          console.log("Error loading recipes");
+        }
+      });
 
-        $.when(recipes_call, images_call).then(function (recipes_response, images_response) {
-          recipes = recipes_response[0];
-          recipe_images = images_response[0];
-          new RecipeListView(recipes.slice(0,9)).render().$el;
+      var images_call = $.ajax({
+           type: 'GET',
+           url:"http://beginveganbegun.es/wp-json/wp/v2/media?filter[date_query][after]=2010-12-03&per_page=3333",
+           crossDomain: true,
+           dataType: 'json',
+           success:function(data){
+              console.log("Images loaded");
+           },
+           error:function(){
+               console.log("Error loading images");
+           }
+      });
+
+      $.when(recipes_call, images_call).then(function (recipes_response, images_response) {
+        var new_recipes = recipes_response[0];
+        recipes.unshift(new_recipes);
+        recipes = _(_(recipes).flatten()).uniq(false, function(recipe){ return recipe.id; });
+        localStorage.setObj("recipes", recipes);
+
+        var new_recipe_images = images_response[0];
+        recipe_images.unshift(new_recipe_images);
+        recipe_images = _(_(recipe_images).flatten()).uniq(false, function(recipe_img){ return recipe_img.id; });
+        localStorage.setObj("recipe_images", recipe_images);
+      })
+      .always(function(){
+        var recipes_in_home = Settings.recipes_in_home
+        if(recipes){
+          new RecipeListView(recipes.slice(0,recipes_in_home - 1)).render().$el;
           $(".splash").hide();
-
-        });
-      }else{
-        new RecipeListView(recipes.slice(0,9)).render().$el;
-      }
+        }else{
+          $(".splash-error").fadeIn(800);
+        }
+      })
+      .fail(function(){
+        alert("Hubo algún error al intentar actualizar las recetas.");
+      });
 
     }
 }
