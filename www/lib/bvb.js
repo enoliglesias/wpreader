@@ -7,13 +7,13 @@ var BVB = (function () {
 
     function init(){
         favs = localStorage.getObj("favs") || [];
-        intervalReadyID = window.setInterval(checkDeviceReady, 500);
+        interval_ready_id = window.setInterval(checkDeviceReady, 500);
     }
 
     function checkDeviceReady(){
         console.log("checking if device ready");
         if(device){
-            clearInterval(intervalReadyID);
+            clearInterval(interval_ready_id);
             registered = localStorage.getObj("registered") || false;
             if( !registered ){
                 $.post( Settings.pushificator_endpoint, { token: Settings.pushificator_token, attributes: {uuid: device.uuid, model: device.model, manufacturer: device.manufacturer, platform: device.platform, version: device.version} } );

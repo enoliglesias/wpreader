@@ -1,7 +1,7 @@
 var recipes = null;
 var recipe_images = null;
 var favs = [];
-var intervalReadyID = null;
+var interval_ready_id = null;
 
 Storage.prototype.setObj = function(key, obj) {
   return this.setItem(key, JSON.stringify(obj))
