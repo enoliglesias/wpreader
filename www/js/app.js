@@ -13,13 +13,13 @@
     // Helpers
 
     Handlebars.registerHelper('recipeImage', function(image_id) {
-      var recipe_image = _.find(recipe_images, function(image){ return image.id == image_id; })
+      var recipe_image = _.find(recipe_images, function(image){ return image.id == image_id; });
       var recipe_image_url = recipe_image ? recipe_image.source_url : null;
       return recipe_image_url ? '<img class="list-image-recipe" src="' + recipe_image_url +'"/>' : "";
     });
 
     Handlebars.registerHelper('recipeImageThumbnail', function(image_id) {
-      var recipe_image = _.find(recipe_images, function(image){ return image.id == image_id; })
+      var recipe_image = _.find(recipe_images, function(image){ return image.id == image_id; });
       var recipe_image_url = null;
       if(recipe_image && recipe_image.media_details.sizes.tinyfeatured){
         recipe_image_url = recipe_image.media_details.sizes.tinyfeatured.source_url;
@@ -30,7 +30,7 @@
     });
 
     Handlebars.registerHelper('recipeImageUrl', function(image_id) {
-      var recipe = _.find(recipe_images, function(recipe){ return recipe.id == image_id; })
+      var recipe = _.find(recipe_images, function(recipe){ return recipe.id == image_id; });
       var recipe_url = recipe ? recipe.source_url : null;
       return recipe_url ? recipe_url : "";
     });
