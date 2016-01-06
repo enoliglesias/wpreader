@@ -208,6 +208,13 @@ ul.recipe-table li {
   transform: translate(-50%, -50%);
 }
 
+.splash-error {
+  font-size: 16px;
+  text-transform: none;
+  color: red;
+  display: none;
+}
+
 #page {
   position: relative;
   width: 100%;
