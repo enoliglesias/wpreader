@@ -27,8 +27,8 @@ var BVB = (function () {
         var fav_action = recipe_in_favs ? "unfav" : "fav";
         var fav_image = recipe_in_favs ? Settings.fav_star_base64 : Settings.unfav_star_base64;
 
-        return '<span class="fav-star" data-action="' + fav_action
-      +'" data-recipe-id="' + recipe_id + '"><img id="fav-star-img" src="' + fav_image + '"/></span>';
+        return '<span class="fav-star" data-action="' + fav_action +
+        '" data-recipe-id="' + recipe_id + '"><img id="fav-star-img" src="' + fav_image + '"/></span>';
     }
 
     function getFavSpan(recipe_id){
@@ -45,8 +45,8 @@ var BVB = (function () {
             removeFav(recipe_id);
         }
 
-        return '<span class="fav-star" data-action="' + fav_action
-      +'" data-recipe-id="' + recipe_id + '"><img id="fav-star-img" src="' + fav_image + '"/></span>';
+        return '<span class="fav-star" data-action="' + fav_action +
+        '" data-recipe-id="' + recipe_id + '"><img id="fav-star-img" src="' + fav_image + '"/></span>';
     }
 
     function addFav(recipe_id){
