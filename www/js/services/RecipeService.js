@@ -87,12 +87,11 @@ var RecipeService = function() {
         localStorage.setObj("recipe_images", recipe_images);
       })
       .always(function(){
-        var recipes_in_home = Settings.recipes_in_home;
         if(recipes){
           last_updated = moment().subtract(1, "days").format("YYYY-MM-DD");
           localStorage.setObj("last_updated", last_updated);
 
-          new RecipeListView(recipes.slice(0,recipes_in_home - 1)).render().$el;
+          new RecipeListView(recipes.slice(0,Settings.recipes_in_home - 1)).render().$el;
           $(".splash").hide();
         }else{
           $(".splash-error").fadeIn(800);
