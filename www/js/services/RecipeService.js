@@ -35,9 +35,13 @@ var RecipeService = function() {
 
 
     this.printRecipes = function() {
+      $(".splash").show();
+
       recipes = localStorage.getObj("recipes") || [];
       recipe_images = localStorage.getObj("recipe_images") || [];
-      $(".splash").show();
+
+      var recipes_filter = "filter[date_query][after]=2010-12-03&per_page=3333";
+      var recipe_images_filter = "filter[date_query][after]=2010-12-03&per_page=3333";
       $.ajaxSetup({
           beforeSend: function(xhr) {
               xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
@@ -46,7 +50,7 @@ var RecipeService = function() {
 
       var recipes_call = $.ajax({
         type: 'GET',
-        url: Settings.wp_posts_endpoint + "?filter[date_query][after]=2010-12-03&per_page=3333",
+        url: Settings.wp_posts_endpoint + "?" + recipes_filter,
         crossDomain: true,
         dataType: 'json',
         success:function(data){
@@ -59,7 +63,7 @@ var RecipeService = function() {
 
       var images_call = $.ajax({
            type: 'GET',
-           url: Settings.wp_images_endpoint + "?filter[date_query][after]=2010-12-03&per_page=3333",
+           url: Settings.wp_images_endpoint + "?" + recipe_images_filter,
            crossDomain: true,
            dataType: 'json',
            success:function(data){
