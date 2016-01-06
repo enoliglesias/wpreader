@@ -35,71 +35,80 @@ var RecipeService = function() {
 
 
     this.printRecipes = function() {
-      $(".splash").show();
+      if( !application_started ){
+        $(".splash").show();
 
-      recipes = localStorage.getObj("recipes") || [];
-      recipe_images = localStorage.getObj("recipe_images") || [];
-      last_updated = localStorage.getObj("last_updated") || "1984-01-01";
+        recipes = localStorage.getObj("recipes") || [];
+        recipe_images = localStorage.getObj("recipe_images") || [];
+        last_updated = localStorage.getObj("last_updated") || "1984-01-01";
 
-      var recipes_filter = "filter[date_query][after]=" + last_updated + "&per_page=3333";
-      var recipe_images_filter = "filter[date_query][after]=" + last_updated + "&per_page=3333";
-      $.ajaxSetup({
-          beforeSend: function(xhr) {
-              xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
+        var recipes_filter = "filter[date_query][after]=" + last_updated + "&per_page=3333";
+        var recipe_images_filter = "filter[date_query][after]=" + last_updated + "&per_page=3333";
+        $.ajaxSetup({
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
+            }
+        });
+
+        var recipes_call = $.ajax({
+          type: 'GET',
+          url: Settings.wp_posts_endpoint + "?" + recipes_filter,
+          crossDomain: true,
+          dataType: 'json',
+          success:function(data){
+            console.log("Recipes loaded");
+          },
+            error:function(){
+            console.log("Error loading recipes");
           }
-      });
+        });
 
-      var recipes_call = $.ajax({
-        type: 'GET',
-        url: Settings.wp_posts_endpoint + "?" + recipes_filter,
-        crossDomain: true,
-        dataType: 'json',
-        success:function(data){
-          console.log("Recipes loaded");
-        },
-          error:function(){
-          console.log("Error loading recipes");
-        }
-      });
+        var images_call = $.ajax({
+             type: 'GET',
+             url: Settings.wp_images_endpoint + "?" + recipe_images_filter,
+             crossDomain: true,
+             dataType: 'json',
+             success:function(data){
+                console.log("Images loaded");
+             },
+             error:function(){
+                 console.log("Error loading images");
+             }
+        });
 
-      var images_call = $.ajax({
-           type: 'GET',
-           url: Settings.wp_images_endpoint + "?" + recipe_images_filter,
-           crossDomain: true,
-           dataType: 'json',
-           success:function(data){
-              console.log("Images loaded");
-           },
-           error:function(){
-               console.log("Error loading images");
-           }
-      });
+        $.when(recipes_call, images_call).then(function (recipes_response, images_response) {
+          var new_recipes = recipes_response[0];
+          recipes.unshift(new_recipes);
+          recipes = _(_(recipes).flatten()).uniq(false, function(recipe){ return recipe.id; });
+          localStorage.setObj("recipes", recipes);
 
-      $.when(recipes_call, images_call).then(function (recipes_response, images_response) {
-        var new_recipes = recipes_response[0];
-        recipes.unshift(new_recipes);
-        recipes = _(_(recipes).flatten()).uniq(false, function(recipe){ return recipe.id; });
-        localStorage.setObj("recipes", recipes);
-
-        var new_recipe_images = images_response[0];
-        recipe_images.unshift(new_recipe_images);
-        recipe_images = _(_(recipe_images).flatten()).uniq(false, function(recipe_img){ return recipe_img.id; });
-        localStorage.setObj("recipe_images", recipe_images);
-      })
-      .always(function(){
+          var new_recipe_images = images_response[0];
+          recipe_images.unshift(new_recipe_images);
+          recipe_images = _(_(recipe_images).flatten()).uniq(false, function(recipe_img){ return recipe_img.id; });
+          localStorage.setObj("recipe_images", recipe_images);
+        })
+        .always(function(){
+          if(recipes){
+            last_updated = moment().subtract(1, "days").format("YYYY-MM-DD");
+            localStorage.setObj("last_updated", last_updated);
+            application_started = true;
+            new RecipeListView(recipes.slice(0,Settings.recipes_in_home - 1)).render().$el;
+            $(".splash").hide();
+          }else{
+            $(".splash-error").fadeIn(800);
+          }
+        })
+        .fail(function(){
+          alert("Hubo algún error al intentar actualizar las recetas.");
+        });
+      }else{
         if(recipes){
-          last_updated = moment().subtract(1, "days").format("YYYY-MM-DD");
-          localStorage.setObj("last_updated", last_updated);
-
           new RecipeListView(recipes.slice(0,Settings.recipes_in_home - 1)).render().$el;
-          $(".splash").hide();
         }else{
+          application_started = false;
+          $(".splash").show();
           $(".splash-error").fadeIn(800);
         }
-      })
-      .fail(function(){
-        alert("Hubo algún error al intentar actualizar las recetas.");
-      });
-
+      }
     }
 }
