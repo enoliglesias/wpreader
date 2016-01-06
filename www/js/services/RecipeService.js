@@ -40,8 +40,8 @@ var RecipeService = function() {
       recipes = localStorage.getObj("recipes") || [];
       recipe_images = localStorage.getObj("recipe_images") || [];
 
-      var recipes_filter = "filter[date_query][after]=2010-12-03&per_page=3333";
-      var recipe_images_filter = "filter[date_query][after]=2010-12-03&per_page=3333";
+      var recipes_filter = "filter[date_query][after]=" + last_updated + "&per_page=3333";
+      var recipe_images_filter = "filter[date_query][after]=" + last_updated + "&per_page=3333";
       $.ajaxSetup({
           beforeSend: function(xhr) {
               xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
