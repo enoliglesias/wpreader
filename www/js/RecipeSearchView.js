@@ -9,7 +9,7 @@ var RecipeSearchView = function (recipes, service) {
 
     this.render = function() {
         // We dont want to load any recipe when view is initialized
-        recipeSearchListView.render([])
+        recipeSearchListView.render([]);
     };
 
     this.findByName = function() {
