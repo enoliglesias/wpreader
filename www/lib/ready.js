@@ -19,7 +19,7 @@ $(document).ready(function() {
   });
 
   $(document).on("click", "#send_contact_form", function(e){
-    var attributes_arr = _($("#contact_form").serializeArray())
+    var attributes_arr = _($("#contact_form").serializeArray());
     var value_arr = attributes_arr.pluck("value");
     if (_(value_arr).includes("")){
       alert("Por favor, rellena todos los campos.");
