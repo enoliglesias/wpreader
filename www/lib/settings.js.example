@@ -5,5 +5,7 @@ var Settings = {
   send_email_password: "modify this"
   fav_star_base64: "modify this",
   unfav_star_base64: "modify this",
-  recipes_in_home: 10
+  recipes_in_home: 10,
+  wp_posts_endpoint: "modify this",
+  wp_images_endpoint: "modify this"
 };
