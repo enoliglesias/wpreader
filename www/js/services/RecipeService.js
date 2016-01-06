@@ -28,7 +28,7 @@ var RecipeService = function() {
             return title.toLowerCase().indexOf(searchKey.toLowerCase()) > -1;
         });
         // Return no recipes when search key is empty
-        results = searchKey.length == 0 ? [] : results;
+        results = searchKey.length === 0 ? [] : results;
         deferred.resolve(results);
         return deferred.promise();
     }
@@ -86,7 +86,7 @@ var RecipeService = function() {
         localStorage.setObj("recipe_images", recipe_images);
       })
       .always(function(){
-        var recipes_in_home = Settings.recipes_in_home
+        var recipes_in_home = Settings.recipes_in_home;
         if(recipes){
           new RecipeListView(recipes.slice(0,recipes_in_home - 1)).render().$el;
           $(".splash").hide();
