@@ -46,7 +46,7 @@ var RecipeService = function() {
 
       var recipes_call = $.ajax({
         type: 'GET',
-        url:"http://beginveganbegun.es/wp-json/wp/v2/posts?filter[date_query][after]=2010-12-03&per_page=3333",
+        url: Settings.wp_posts_endpoint + "?filter[date_query][after]=2010-12-03&per_page=3333",
         crossDomain: true,
         dataType: 'json',
         success:function(data){
@@ -59,7 +59,7 @@ var RecipeService = function() {
 
       var images_call = $.ajax({
            type: 'GET',
-           url:"http://beginveganbegun.es/wp-json/wp/v2/media?filter[date_query][after]=2010-12-03&per_page=3333",
+           url: Settings.wp_images_endpoint + "?filter[date_query][after]=2010-12-03&per_page=3333",
            crossDomain: true,
            dataType: 'json',
            success:function(data){
