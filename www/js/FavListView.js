@@ -1,7 +1,7 @@
 var FavListView = function (recipes) {
 
     this.initialize = function() {
-      recipes = _(recipes).select(function(recipe){ return _(favs).contains(recipe.id)})
+      recipes = _(recipes).select(function(recipe){ return _(favs).contains(recipe.id)});
       this.$el = $('#content');
     };
 
