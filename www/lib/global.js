@@ -4,6 +4,7 @@ var favs = [];
 var interval_ready_id = null;
 var registered = false;
 var last_updated = "1984-01-01";
+var application_started = false;
 
 Storage.prototype.setObj = function(key, obj) {
   return this.setItem(key, JSON.stringify(obj));
