@@ -219,6 +219,7 @@ ul.recipe-table li {
   position: relative;
   width: 100%;
   padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 #form-div {
