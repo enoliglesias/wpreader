@@ -167,6 +167,7 @@ ul.table-view.recipe-table {
 
 ul.recipe-table.large li {
   padding: 0px 10px;
+  margin-bottom: 50px;
 }
 
 ul.recipe-table.mini li{
