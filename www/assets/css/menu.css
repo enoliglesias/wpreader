@@ -11,9 +11,13 @@
   width: 20%;
   float: left;
   text-align: center;
-  padding-top: 14px;
+  padding-top: 10px;
 }
 
 .menu div.selected {
   background-color: #e5e5e5;
+}
+
+.menu-option img {
+  height: 32px;
 }
