@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="title" content="Begin Vegan Begun">
     <link href="assets/css/custom.css" rel="stylesheet">
-    <link href="assets/css/burger-menu.css" rel="stylesheet">
-    <link href="assets/css/jquery.mmenu.all.css" rel="stylesheet">
+    <link href="assets/css/menu.css" rel="stylesheet">
 
     <script src="lib/jquery.js"></script>
-    <script src="lib/jquery.mmenu.min.all.js"></script>
     <script src="lib/settings.js"></script>
     <script src="lib/router.js"></script>
     <script src="lib/global.js"></script>
@@ -20,11 +18,6 @@
     <script src="lib/ready.js"></script>
     <script src="cordova.js"></script>
 
-    <script type="text/javascript">
-        $(function() {
-            $('nav#menu').mmenu();
-        });
-    </script>
 </head>
 <body>
 
@@ -37,25 +30,7 @@
         </div>
     </div>
 
-    <div class="header">
-        <a href="#menu"></a>
-        Begin <span class="aquamarina">Vegan</span> Begun
-    </div>
-
     <div id="page">
-
-        <nav id="menu">
-            <ul>
-                <li class="close-cross"><img id="close_menu_cross" src="img/close.png"/></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#favs">Favoritas</a></li>
-                <li><a href="#search">Buscar recetas</a></li>
-                <li><a href="#salad-recipe-list">Recetas saladas</a></li>
-                <li><a href="#sweet-recipe-list">Recetas dulces</a></li>
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
 
         <div class="content" id="content">
 
@@ -156,6 +131,34 @@
 
         </div>
 
+    </div>
+
+    <div class="menu">
+        <a href="#">
+            <div class="menu-option home">
+                <img src="img/home.svg">
+            </div>
+        </a>
+        <a href="#search">
+            <div class="menu-option search">
+                <img src="img/search.svg">
+            </div>
+        </a>
+        <a href="#favs">
+            <div class="menu-option favs">
+                <img src="img/favs.svg">
+            </div>
+        </a>
+        <a href="#about">
+            <div class="menu-option about-me">
+                <img src="img/about-me.svg">
+            </div>
+        </a>
+        <a href="#contact">
+            <div class="menu-option contact">
+                <img src="img/contact.svg">
+            </div>
+        </a>
     </div>
 
     <script src="js/services/RecipeService.js"></script>

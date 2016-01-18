@@ -59,10 +59,28 @@ var BVB = (function () {
         localStorage.setObj("favs", favs);
     }
 
+    function deactivateMenu(menu_point){
+        $(".menu-option." + menu_point + " > img").attr("src", "img/" + menu_point + ".svg");
+    }
+
+    function deactivateAllMenu(){
+        _(menu_options).each(function(point){
+            deactivateMenu(point);
+        });
+    }
+
+    function activateMenu(menu_point){
+        deactivateAllMenu();
+        $(".menu-option." + menu_point + " > img").attr("src", "img/" + menu_point + "_active.svg");
+    }
+
     return {
         init: init,
         getFavSpanOnLoad: getFavSpanOnLoad,
-        getFavSpan: getFavSpan
+        getFavSpan: getFavSpan,
+        activateMenu: activateMenu,
+        deactivateMenu: deactivateMenu,
+        deactivateAllMenu: deactivateAllMenu
     };
 
 }());
