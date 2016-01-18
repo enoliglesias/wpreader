@@ -69,6 +69,8 @@ nav:not(.mm-menu)
   top: 0;
   left: 0;
   z-index: 9999;
+  border-bottom: 1px solid #757575;
+
 }
 
 .content,
@@ -79,9 +81,9 @@ nav:not(.mm-menu)
 .header,
 .footer
 {
-  background: #000;
+  background: #e5e5e5;
   font-size: 27px;
-  color: #fff;
+  color: #000;
   line-height: 40px;
   font-family: "oswald";
   text-transform: uppercase;
