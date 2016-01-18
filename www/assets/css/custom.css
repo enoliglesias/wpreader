@@ -166,7 +166,7 @@ ul.table-view.recipe-table {
 }
 
 ul.recipe-table.large li {
-  padding: 15px 15px 5px 10px;
+  padding: 0px 10px;
 }
 
 ul.recipe-table.mini li{
@@ -342,6 +342,11 @@ div.social-sharing {
   margin-left: 10px;
 }
 
+div.social-sharing span.fav-star {
+    float: right;
+    margin-right: 10px;
+}
+
 div.social-sharing p{
   font-family: "oswald";
 }
@@ -383,6 +388,7 @@ a.page-favs-link {
 .page-search .recipe-row span.fav-star,
 .favs .recipe-row span.fav-star {
   margin-top: 15px;
+  margin-right: 10px;
 }
 
 .large-title-link {
