@@ -45,38 +45,39 @@
     service.initialize().done(function () {
       router.addRoute('', function() {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
+        BVB.activateMenu("home");
         service.printRecipes();
       });
 
       router.addRoute('recipes/:id', function(id) {
           service.findById(parseInt(id)).done(function(recipe) {
             document.body.scrollTop = document.documentElement.scrollTop = 0;
+            BVB.deactivateAllMenu();
             $('#content').html(new RecipeView(recipe).render().$el);
           });
       });
 
       router.addRoute('search', function() {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
+        BVB.activateMenu("search");
         $('#content').load("search.html");
       });
 
       router.addRoute('about', function() {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
+        BVB.activateMenu("about-me");
         $('#content').load("about.html");
-      });
-
-      router.addRoute('salad-recipe-list', function() {
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
-        $('#content').load("recipe-list.html");
       });
 
       router.addRoute('contact', function() {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
+        BVB.activateMenu("contact");
         $('#content').load("contact.html");
       });
 
       router.addRoute('favs', function() {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
+        BVB.activateMenu("favs");
         new FavListView(recipes).render().$el;
       });
 
