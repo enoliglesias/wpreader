@@ -5,7 +5,7 @@ var BVB = (function () {
     function init(){
         favs = localStorage.getObj("favs") || [];
         registered = localStorage.getObj("registered") || false;
-        if( !registered ){
+        if( Settings.register_devices && !registered ){
             interval_ready_id = window.setInterval(checkDeviceReady, 500);
         }
     }
@@ -14,9 +14,11 @@ var BVB = (function () {
         if(device){
             clearInterval(interval_ready_id);
             if( !registered ){
-                $.post( Settings.pushificator_endpoint, { token: Settings.pushificator_token, attributes: {uuid: device.uuid, model: device.model, manufacturer: device.manufacturer, platform: device.platform, version: device.version} } );
-                registered = true;
-                localStorage.setObj("registered", true);
+                $.post( Settings.pushificator_endpoint, { token: Settings.pushificator_token, attributes: {uuid: device.uuid, model: device.model, manufacturer: device.manufacturer, platform: device.platform, version: device.version} } )
+                .success(function(){
+                    registered = true;
+                    localStorage.setObj("registered", true);
+                });
             }
         }
     }
