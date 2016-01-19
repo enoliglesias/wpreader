@@ -76,13 +76,24 @@ var BVB = (function () {
         $(".menu-option." + menu_point + " > img").attr("src", "img/" + menu_point + "_active.svg");
     }
 
+    function printNextPage(){
+        var first_index = Settings.recipes_in_home * current_page;
+        var last_index = first_index + Settings.recipes_in_home - 1;
+        var template = Handlebars.compile("{{#each this}}<li class='table-view-cell media recipe-row'><div class='media-body'><p><a class='large-title-link' href='#recipes/{{ id }}'>{{ title.rendered }}</a>{{{ recipeFav id }}}</p><a href='#recipes/{{ id }}'>{{{ recipeImage featured_image }}}</a></div></li>{{/each}}");
+        var recipes_to_print = recipes.slice(first_index, last_index);
+        var raw_recipes_html = template(recipes_to_print);
+        $(".table-view.recipe-table.large").append(raw_recipes_html);
+        current_page += 1;
+    }
+
     return {
         init: init,
         getFavSpanOnLoad: getFavSpanOnLoad,
         getFavSpan: getFavSpan,
         activateMenu: activateMenu,
         deactivateMenu: deactivateMenu,
-        deactivateAllMenu: deactivateAllMenu
+        deactivateAllMenu: deactivateAllMenu,
+        printNextPage: printNextPage
     };
 
 }());
