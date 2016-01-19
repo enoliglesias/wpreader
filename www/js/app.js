@@ -44,6 +44,7 @@
 
     service.initialize().done(function () {
       router.addRoute('', function() {
+        current_page = 1;
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         BVB.activateMenu("home");
         service.printRecipes();
