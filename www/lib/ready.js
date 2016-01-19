@@ -3,7 +3,7 @@ $(document).ready(function() {
   BVB.init();
 
   $(window).scroll(function(){
-    if(location.hash == "" && $(window).scrollTop() > $(document).height() - $(window).height() - 40){
+    if(location.hash == "" && $(window).scrollTop() > $(document).height() - $(window).height() - 150){
       BVB.printNextPage();
     }
   });
