@@ -71,9 +71,19 @@ var BVB = (function () {
         });
     }
 
+    function deactivateSettings(){
+        $(".settings-link > img").attr("src", "img/settings.svg");
+    }
+
     function activateMenu(menu_point){
         deactivateAllMenu();
+        deactivateSettings();
         $(".menu-option." + menu_point + " > img").attr("src", "img/" + menu_point + "_active.svg");
+    }
+
+    function activateSettings(){
+        deactivateAllMenu();
+        $(".settings-link > img").attr("src", "img/settings_active.svg");
     }
 
     function printNextPage(){
@@ -93,7 +103,9 @@ var BVB = (function () {
         activateMenu: activateMenu,
         deactivateMenu: deactivateMenu,
         deactivateAllMenu: deactivateAllMenu,
-        printNextPage: printNextPage
+        printNextPage: printNextPage,
+        deactivateSettings: deactivateSettings,
+        activateSettings: activateSettings
     };
 
 }());
