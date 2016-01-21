@@ -58,11 +58,6 @@ a, a:link, a:active, a:visited, a:hover
   font-size: 16px;
 }
 
-nav:not(.mm-menu)
-{
-  display: none;
-}
-
 .header {
   text-align: center;
   position: fixed;
@@ -372,20 +367,4 @@ a.page-favs-link {
 .large-title-link {
   float: left;
   width: 89%;
-}
-
-li.close-cross {
-  text-align: right;
-  top: -32px;
-  right: 8px;
-}
-
-.mm-listview > li.close-cross:not(.mm-divider):after {
-  border-bottom-style: none;
-}
-
-li.close-cross img {
-  width: 22px;
-  height: auto;
-  cursor: pointer;
 }
