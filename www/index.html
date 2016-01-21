@@ -83,11 +83,14 @@
                             {{/each}}
                     </ul>
                 {{else}}
-                    <h1 class="title">
-                        No tienes recetas añadidas a favoritas.<br/>
-                        Para añadirlas, sólo tienes que pulsar en el <img src="img/unfav.svg"/><br/>
-                        que hay en cada receta.
-                    </h1>
+                    <div class="empty-favs">
+                        <p class="title">
+                            No tienes recetas añadidas a favoritas.
+                        </p>
+                        <p class="title">
+                            Para añadirlas, sólo tienes que pulsar en el <img src="img/unfav.svg"/> que hay en cada receta.
+                        </p>
+                    </div>
                 {{/if}}
             </script>
 
