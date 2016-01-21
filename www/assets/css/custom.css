@@ -227,9 +227,9 @@ ul.recipe-table li {
 
 #form-div {
   float: left;
-  position: absolute;
   width: 100%;
   margin-top:30px;
+  padding-bottom: 50px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
 }
@@ -268,36 +268,21 @@ ul.recipe-table li {
 
 /* Icons ---------------------------------- */
 #name{
-  background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+  background-image: url(../../img/user.svg);
   background-size: 30px 30px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat;
-}
-
-#name:focus{
-  background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
-  background-size: 30px 30px;
-  background-position: 8px 5px;
   background-position: 11px 8px;
   background-repeat: no-repeat;
 }
 
 #email{
-  background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
-  background-size: 30px 30px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat;
-}
-
-#email:focus{
-  background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+  background-image: url(../../img/email.svg);
   background-size: 30px 30px;
   background-position: 11px 8px;
   background-repeat: no-repeat;
 }
 
 #comment{
-  background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+  background-image: url(../../img/pencil.svg);
   background-size: 30px 30px;
   background-position: 11px 8px;
   background-repeat: no-repeat;
@@ -306,14 +291,6 @@ ul.recipe-table li {
 #search{
   background-image: url(../../img/search.svg);
   background-size: 30px 30px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat;
-}
-
-#search:focus{
-  background-image: url(../../img/search.svg);
-  background-size: 30px 30px;
-  background-position: 8px 5px;
   background-position: 11px 8px;
   background-repeat: no-repeat;
 }
