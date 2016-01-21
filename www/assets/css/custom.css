@@ -355,3 +355,40 @@ a.page-favs-link {
   float: left;
   width: 89%;
 }
+
+.empty-favs {
+  margin-top: 40%;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+span.settings {
+    right: 10px;
+    position: fixed;
+}
+
+.page-settings div,
+.page-settings span {
+  float: left;
+}
+
+.page-settings div {
+  width: 100%;
+}
+
+.settings-list .setting {
+  clear: both;
+}
+
+.setting-text {
+  font-family: "oswald";
+  color: #757575;
+  text-transform: uppercase;
+  margin: 11px 0px 0px 5px;
+}
+
+.setting-image {
+  padding-top: 10px;
+}
+
+
