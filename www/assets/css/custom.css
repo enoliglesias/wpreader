@@ -351,17 +351,16 @@ p.input {
 
 a.page-search-link,
 a.page-favs-link {
-  margin-bottom: 15px;
   position: absolute;
-  margin-top: 18px;
   margin-left: 8px;
-  width: 60%;
+  margin-top: 2px;
+  width: 70%;
 }
 
 .page-search .recipe-row span.fav-star,
 .favs .recipe-row span.fav-star {
-  margin-top: 15px;
   margin-right: 10px;
+  margin-top: 2px;
 }
 
 .large-title-link {
