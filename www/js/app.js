@@ -82,6 +82,13 @@
         new FavListView(recipes).render().$el;
       });
 
+      router.addRoute('settings', function() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        BVB.deactivateAllMenu();
+        BVB.activateSettings();
+        $('#content').load("settings.html");
+      });
+
       router.start();
     });
 
