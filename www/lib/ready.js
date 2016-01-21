@@ -3,14 +3,9 @@ $(document).ready(function() {
   BVB.init();
 
   $(window).scroll(function(){
-    if(location.hash == "" && $(window).scrollTop() > $(document).height() - $(window).height() - 150){
+    if(location.hash === "" && $(window).scrollTop() > $(document).height() - $(window).height() - 150){
       BVB.printNextPage();
     }
-  });
-
-  $(document).on("click", "#menu a", function() {
-    href = $(this).attr("href");
-    window.location.hash = href;
   });
 
   $(document).on("click", ".fav-star", function() {
@@ -19,9 +14,9 @@ $(document).ready(function() {
     $("span[data-recipe-id=" + recipe_id + "]").replaceWith(fav_span);
   });
 
-  $(document).on("click", "#close_menu_cross", function(){
-    var api = $("#menu").data( "mmenu" );
-    api.close();
+  $(document).on("click", ".setting-close", function(e){
+    e.preventDefault();
+    navigator.app.exitApp();
   });
 
   $(document).on("click", "#send_contact_form", function(e){
