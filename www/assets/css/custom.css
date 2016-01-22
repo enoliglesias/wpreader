@@ -385,7 +385,7 @@ span.settings {
  color: #757575;
  margin: 9px 0px 0px 3px;
  font-weight: bold;
- font-size: 13px;
+ font-size: 16px;
 }
 
 .setting-image {
@@ -399,7 +399,7 @@ span.setting-caption {
   clear: both;
   width: 80%;
   padding-left: 30px;
-  font-size: 10px;
+  font-size: 13px;
   color: #757575;
   line-height: 13px;
 }
@@ -410,4 +410,5 @@ span.setting-caption {
   border-bottom: 3px solid #e5e5e5;
   text-transform: uppercase;
   margin-top: 25px;
+  font-size: 20px;
 }
