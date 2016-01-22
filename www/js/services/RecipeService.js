@@ -99,7 +99,7 @@ var RecipeService = function() {
           }
         })
         .fail(function(){
-          alert("Hubo algún error al intentar actualizar las recetas.");
+          navigator.notification.alert("Hubo algún error al intentar actualizar las recetas.", BVB.emptyFunction(), "Error al actualizar", "Aceptar");
         });
       }else{
         if(recipes){

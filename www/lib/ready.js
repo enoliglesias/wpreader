@@ -18,7 +18,7 @@ $(document).ready(function() {
     var attributes_arr = _($("#contact_form").serializeArray());
     var value_arr = attributes_arr.pluck("value");
     if (_(value_arr).includes("")){
-      alert("Por favor, rellena todos los campos.");
+      navigator.notification.alert("Por favor, rellena todos los campos.", BVB.emptyFunction, "Rellenar campos", "Aceptar");
       return false;
     }
     e.preventDefault();
@@ -42,7 +42,7 @@ $(document).ready(function() {
     })
     .always(function(){
       $("input[type=text], textarea").val("");
-      alert("¡Tu mensaje ha sido enviado, gracias!");
+      navigator.notification.alert("¡Tu mensaje ha sido enviado, gracias!", BVB.emptyFunction, "Mensaje enviado", "Aceptar");
     });
   });
 
@@ -53,18 +53,29 @@ $(document).ready(function() {
     navigator.app.exitApp();
   });
 
-  $(document).on("click", "#setting-reset", function(e){
-    e.preventDefault();
-    if (window.confirm("¿Eliminar datos almacenados?")) {
+  function onReset(buttonIndex) {
+    if (buttonIndex === 1) {
       _(["favs", "recipes", "recipe_images", "registered", "last_updated"]).map(function(item){
         localStorage.removeItem(item);
       });
     }
+  }
+
+  $(document).on("click", "#setting-reset", function(e){
+    e.preventDefault();
+    navigator.notification.confirm(
+        '¿Eliminar los datos almacenados?',
+         onReset,
+        'Eliminar datos',
+        ['Aceptar','Cancelar']
+    );
   });
+
+
 
   $(document).on("click", "#setting-info", function(e){
     e.preventDefault();
-    alert("Aplicación móvil del blog Begin Vegan Begun.\nVersión: 1.0.0");
+    navigator.notification.alert("Aplicación móvil del blog Begin Vegan Begun.\nVersión: 1.0.0", BVB.emptyFunction, "Sobre la aplicación", "Aceptar");
   });
 
 });
