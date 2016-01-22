@@ -14,11 +14,6 @@ $(document).ready(function() {
     $("span[data-recipe-id=" + recipe_id + "]").replaceWith(fav_span);
   });
 
-  $(document).on("click", ".setting-close", function(e){
-    e.preventDefault();
-    navigator.app.exitApp();
-  });
-
   $(document).on("click", "#send_contact_form", function(e){
     var attributes_arr = _($("#contact_form").serializeArray());
     var value_arr = attributes_arr.pluck("value");
@@ -49,6 +44,27 @@ $(document).ready(function() {
       $("input[type=text], textarea").val("");
       alert("¡Tu mensaje ha sido enviado, gracias!");
     });
+  });
+
+//######## SETTINGS
+
+  $(document).on("click", "#setting-close", function(e){
+    e.preventDefault();
+    navigator.app.exitApp();
+  });
+
+  $(document).on("click", "#setting-reset", function(e){
+    e.preventDefault();
+    if (window.confirm("¿Eliminar datos almacenados?")) {
+      _(["favs", "recipes", "recipe_images", "registered", "last_updated"]).map(function(item){
+        localStorage.removeItem(item);
+      });
+    }
+  });
+
+  $(document).on("click", "#setting-info", function(e){
+    e.preventDefault();
+    alert("Aplicación móvil del blog Begin Vegan Begun.\nVersión: 1.0.0");
   });
 
 });
