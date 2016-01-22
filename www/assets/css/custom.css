@@ -202,10 +202,10 @@ ul.recipe-table li {
 }
 
 #page {
-  position: relative;
   width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   padding-top: 40px;
+  float: left;
 }
 
 #form-div {
@@ -357,7 +357,6 @@ a.page-favs-link {
 }
 
 .empty-favs {
-  margin-top: 40%;
   text-transform: uppercase;
   font-size: 20px;
 }
@@ -373,22 +372,42 @@ span.settings {
 }
 
 .page-settings div {
-  width: 100%;
+  width: 95%;
+  padding-left: 15px;
 }
 
 .settings-list .setting {
   clear: both;
+  margin-top: 5px;
 }
 
 .setting-text {
-  font-family: "oswald";
-  color: #757575;
-  text-transform: uppercase;
-  margin: 11px 0px 0px 5px;
+ color: #757575;
+ margin: 9px 0px 0px 3px;
+ font-weight: bold;
+ font-size: 13px;
 }
 
 .setting-image {
   padding-top: 10px;
 }
+.setting-image img {
+    height: 15px;
+}
 
+span.setting-caption {
+  clear: both;
+  width: 80%;
+  padding-left: 30px;
+  font-size: 10px;
+  color: #757575;
+  line-height: 13px;
+}
 
+.setting-title {
+  font-family: "oswald";
+  color: #000;
+  border-bottom: 3px solid #e5e5e5;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
