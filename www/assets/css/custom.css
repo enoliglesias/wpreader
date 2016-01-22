@@ -373,7 +373,7 @@ span.settings {
 
 .page-settings div {
   width: 95%;
-  padding-left: 15px;
+  padding-left: 12px;
 }
 
 .settings-list .setting {
@@ -398,7 +398,7 @@ span.settings {
 span.setting-caption {
   clear: both;
   width: 80%;
-  padding-left: 30px;
+  padding: 0px 0px 5px 30px;
   font-size: 13px;
   color: #757575;
   line-height: 13px;
@@ -411,4 +411,5 @@ span.setting-caption {
   text-transform: uppercase;
   margin-top: 25px;
   font-size: 20px;
+  padding-bottom: 5px;
 }
