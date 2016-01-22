@@ -2,6 +2,10 @@ var BVB = (function () {
 
     "use strict";
 
+    function emptyFunction(){
+      return true;
+    }
+
     function init(){
         favs = localStorage.getObj("favs") || [];
         registered = localStorage.getObj("registered") || false;
@@ -105,7 +109,8 @@ var BVB = (function () {
         deactivateAllMenu: deactivateAllMenu,
         printNextPage: printNextPage,
         deactivateSettings: deactivateSettings,
-        activateSettings: activateSettings
+        activateSettings: activateSettings,
+        emptyFunction: emptyFunction
     };
 
 }());
