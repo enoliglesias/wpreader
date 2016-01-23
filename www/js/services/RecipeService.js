@@ -88,7 +88,7 @@ var RecipeService = function() {
           localStorage.setObj("recipe_images", recipe_images);
         })
         .always(function(){
-          if(recipes){
+          if(!_(recipes).isEmpty()){
             last_updated = moment().subtract(1, "days").format("YYYY-MM-DD");
             localStorage.setObj("last_updated", last_updated);
             application_started = true;
@@ -102,7 +102,7 @@ var RecipeService = function() {
           navigator.notification.alert("Hubo algún error al intentar actualizar las recetas.", BVB.emptyFunction(), "Error al actualizar", "Aceptar");
         });
       }else{
-        if(recipes){
+        if(!_(recipes).isEmpty()){
           new RecipeListView(recipes.slice(0,Settings.recipes_in_home - 1)).render().$el;
         }else{
           application_started = false;
