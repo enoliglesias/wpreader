@@ -1,6 +1,6 @@
 # WP Reader
 
-Cordova project to read wordpress blog. As you can see, the names and references, is always about recipes. It's because we use this repo to build the mobile app for the blog [Begin Vegan Begun™](http://beginveganbegun.es)
+Cordova project to read wordpress blog and generate a cross platform mobile app. As you can see, the names and references, is always about recipes. It's because we use this repo to build the mobile app for the blog [Begin Vegan Begun™](http://beginveganbegun.es)
 
 ## Installation
 
