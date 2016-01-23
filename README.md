@@ -11,7 +11,7 @@ Cordova project to read wordpress blog and generate a cross platform mobile app.
     - org.apache.cordova.device 0.3.0 "Device"
 * Install the Wordpress API plugin in your blog. [WP Rest API](http://v2.wp-api.org/). 
 * Configure settings.js
-* Be carefully and remember to change any reference to Begin Vegan Begun™ to your blog's name. Begin Vegan Begun™ is a trade mark.
+* Be carefully and remember to change any reference to [Begin Vegan Begun™](http://beginveganbegun.es) to your blog's name. [Begin Vegan Begun™](http://beginveganbegun.es) is a trade mark.
 * Run `cordova build [platform]`
 * Have fun!
 
@@ -40,5 +40,5 @@ Enol Iglesias Lorenzo ([undefinedmethod.com](http://undefinedmethod.com))
 
 WP Reader is released under the [MIT License](http://opensource.org/licenses/MIT).
 
-Begin Vegan Begun™ is a trade mark.
+[Begin Vegan Begun™](http://beginveganbegun.es) is a trade mark.
 
