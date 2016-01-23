@@ -100,6 +100,14 @@ var BVB = (function () {
         current_page += 1;
     }
 
+    function showSpinner(){
+        $(".loading").show();
+    }
+
+    function hideSpinner(){
+        $(".loading").hide();
+    }
+
     return {
         init: init,
         getFavSpanOnLoad: getFavSpanOnLoad,
@@ -110,7 +118,9 @@ var BVB = (function () {
         printNextPage: printNextPage,
         deactivateSettings: deactivateSettings,
         activateSettings: activateSettings,
-        emptyFunction: emptyFunction
+        emptyFunction: emptyFunction,
+        showSpinner: showSpinner,
+        hideSpinner: hideSpinner
     };
 
 }());
