@@ -13,7 +13,9 @@
     // Helpers
 
     Handlebars.registerHelper('parsedContent', function(content_text) {
-      return content_text.replace("src=\"\/\/", "src=\"https:\/\/");
+      content_text = content_text.replace("src=\"\/\/", "src=\"https:\/\/");
+      content_text = content_text.replace(/(youtube.*width=\")(.*)(\" hei.*)/,"$198%$3");
+      return content_text;
     });
 
     Handlebars.registerHelper('recipeImage', function(image_id) {
