@@ -22,7 +22,7 @@ $(document).ready(function() {
       return false;
     }
     e.preventDefault();
-
+    BVB.showSpinner();
     $.ajaxSetup({
        beforeSend: function(xhr) {
            xhr.setRequestHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Origin');
@@ -42,6 +42,7 @@ $(document).ready(function() {
     })
     .always(function(){
       $("input[type=text], textarea").val("");
+      BVB.hideSpinner();
       navigator.notification.alert("¡Tu mensaje ha sido enviado, gracias!", BVB.emptyFunction, "Mensaje enviado", "Aceptar");
     });
   });
