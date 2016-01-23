@@ -5,10 +5,15 @@ Cordova project to read wordpress blog. As you can see, the names and references
 ## Installation
 
 * Install Cordova, dependencies, etc. (Don't worry! It's "fun")
+* Cordova plugins needed:
+    - cordova-plugin-dialogs 1.2.0 "Notification"
+    - cordova-plugin-whitelist 1.2.0 "Whitelist"
+    - org.apache.cordova.device 0.3.0 "Device"
 * Install the Wordpress API plugin in your blog. [WP Rest API](http://v2.wp-api.org/). 
 * Configure settings.js
-* Change the references to your name's blog.
-* 
+* Be carefully and remember to change any reference to Begin Vegan Begun™ to your blog's name. Begin Vegan Begun™ is a trade mark.
+* Run `cordova build [platform]`
+* Have fun!
 
 ## Screenshots
 
@@ -17,7 +22,7 @@ Cordova project to read wordpress blog. As you can see, the names and references
 ## TODO
 
 * Push notifications
-    I'm working in a parallel project ([Pushificator](https://github.com/enoliglesias/pushificator)) to send push notifications to a mobiles from a web app. Once I get this project finished I'm going to add in this project functionality to register the devices in that web app, vía API and then send the notifications :)
+    I'm working in a parallel project ([Pushificator](https://github.com/enoliglesias/pushificator)) to send push notifications to a mobiles from a web app. Once I get this project finished I'm going to add in this project functionality to register the devices in that web app, vía API. And then send the notifications :)
 
 ## Contributing
 
@@ -35,4 +40,5 @@ Enol Iglesias Lorenzo ([undefinedmethod.com](http://undefinedmethod.com))
 
 WP Reader is released under the [MIT License](http://opensource.org/licenses/MIT).
 
-Be carefully and remember to change any reference to Begin Vegan Begun™ if you want to use it. Begin Vegan Begun™ is a trade mark.
+Begin Vegan Begun™ is a trade mark.
+
