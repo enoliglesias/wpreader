@@ -303,6 +303,13 @@ textarea {
   padding-bottom:22px;
   margin-top:-4px;
   font-weight:700;
+  border: none;
+  letter-spacing: 2px;
+}
+
+.submit.input {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 div.social-sharing {
