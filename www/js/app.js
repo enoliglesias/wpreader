@@ -12,6 +12,10 @@
 
     // Helpers
 
+    Handlebars.registerHelper('parsedContent', function(content_text) {
+      return content_text.replace("src=\"\/\/", "src=\"https:\/\/");
+    });
+
     Handlebars.registerHelper('recipeImage', function(image_id) {
       var recipe_image = _.find(recipe_images, function(image){ return image.id == image_id; });
       var recipe_image_url = recipe_image ? recipe_image.source_url : null;
