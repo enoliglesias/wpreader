@@ -1,6 +1,8 @@
 # WP Reader
 
-Cordova project to read wordpress blog and generate a cross platform mobile app. As you can see, the names and references, is always about recipes. It's because we use this repo to build the mobile app for the blog [Begin Vegan Begun™](http://beginveganbegun.es)
+Cordova project to read wordpress blog and generate a cross platform mobile app. 
+
+As you can see, the names and references, is always about recipes. It's because we use this repo to build the mobile app for the blog [Begin Vegan Begun™](http://beginveganbegun.es)
 
 ## Installation
 
@@ -22,6 +24,7 @@ Cordova project to read wordpress blog and generate a cross platform mobile app.
 ## TODO
 
 * Push notifications
+
     I'm working in a parallel project ([Pushificator](https://github.com/enoliglesias/pushificator)) to send push notifications to a mobiles from a web app. Once I get this project finished I'm going to add in this project functionality to register the devices in that web app, vía API. And then send the notifications :)
 
 ## Contributing
