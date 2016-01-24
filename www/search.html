@@ -10,23 +10,29 @@
 
   <div class="content search-content" id="search-content">
     <script id="recipe-search-tpl" type="text/template">
-        <ul class="table-view recipe-table mini">
-            {{#each this}}
-            <li class="table-view-cell media recipe-row">
-                    <div class="media-body">
-                        <p>
-                          <a class="page-search-image-link" href="#recipes/{{ id }}">
-                              {{{ recipeImageThumbnail featured_image }}}
-                          </a>
-                            <a class="page-search-link" href="#recipes/{{ id }}">
-                                {{ title.rendered }}
+       {{#if this}}
+          <ul class="table-view recipe-table mini">
+              {{#each this}}
+              <li class="table-view-cell media recipe-row">
+                      <div class="media-body">
+                          <p>
+                            <a class="page-search-image-link" href="#recipes/{{ id }}">
+                                {{{ recipeImageThumbnail featured_image }}}
                             </a>
-                            {{{ recipeFav id }}}
-                        </p>
-                    </div>
-            </li>
-            {{/each}}
-        </ul>
+                              <a class="page-search-link" href="#recipes/{{ id }}">
+                                  {{ title.rendered }}
+                              </a>
+                              {{{ recipeFav id }}}
+                          </p>
+                      </div>
+              </li>
+              {{/each}}
+          </ul>
+        {{else}}
+          <p class="info empty-results">
+              No hay resultados para mostrar.
+          </p>
+        {{/if}}
     </script>
 
   </div>
