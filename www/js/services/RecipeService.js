@@ -23,12 +23,20 @@ var RecipeService = function() {
 
     this.findByName = function(searchKey) {
         var deferred = $.Deferred();
+        var text;
+        var search_text = searchKey;
         var results = recipes.filter(function(element) {
-            var title = element.title.rendered;
-            return title.toLowerCase().indexOf(searchKey.toLowerCase()) > -1;
+            if(searchKey[0] === "#"){
+              var taxonomies = _([element.tags,  element.categories]).flatten();
+              text = _((taxonomies)).pluck("name").join();
+              search_text = searchKey.slice(1);
+            }else{
+              text = element.title.rendered;
+            }
+            return text.toLowerCase().indexOf(search_text.toLowerCase()) > -1;
         });
         // Return no recipes when search key is empty
-        results = searchKey.length === 0 ? [] : results;
+        results = search_text.length === 0 ? [] : results;
         deferred.resolve(results);
         return deferred.promise();
     }
