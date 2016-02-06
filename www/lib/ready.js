@@ -8,6 +8,13 @@ $(document).ready(function() {
     }
   });
 
+  $(document).on("click", ".toggle-link", function(e) {
+    e.preventDefault();
+    var image_url = $(".social-toggle-content").is(':visible') ? "img/share.svg" : "img/share_active.svg";
+    $(".toggle-link img").attr("src", image_url);
+    $(".social-toggle-content").toggle();
+  });
+
   $(document).on("click", ".fav-star", function() {
     var recipe_id = $(this).data("recipe-id");
     var fav_span = BVB.getFavSpan(recipe_id);
