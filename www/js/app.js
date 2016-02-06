@@ -12,6 +12,10 @@
 
     // Helpers
 
+    Handlebars.registerHelper('recipeDate', function(date) {
+     return moment(date).format("DD [de] MMMM [de] YYYY");
+    });
+
     Handlebars.registerHelper('parsedContent', function(content_text) {
       content_text = content_text.replace("src=\"\/\/", "src=\"https:\/\/");
       content_text = content_text.replace(/(youtube.*width=\")(.*)(\" hei.*)/,"$198%$3");
