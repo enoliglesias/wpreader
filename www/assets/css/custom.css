@@ -441,3 +441,21 @@ span.setting-caption {
   font-size: 20px;
   padding-bottom: 5px;
 }
+
+div.tag-cloud {
+  float: left;
+  width: 95%;
+  padding: 0 10px 0 10px;
+}
+
+span.tag {
+  background-color: #00A498;
+  margin-right: 10px;
+  padding: 5px;
+  color: #FFF;
+  border-radius: 5px;
+  display: block;
+  float: left;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
