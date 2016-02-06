@@ -8,5 +8,6 @@ var Settings = {
   recipes_in_home: 10,
   wp_posts_endpoint: "modify this",
   wp_images_endpoint: "modify this",
-  register_devices: false
+  register_devices: false,
+  google_analitytics_id: "UA-XXXX-YY"
 };
