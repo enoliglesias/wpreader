@@ -145,15 +145,14 @@
                 <div class="recipe detail">
                     {{{ recipeImage featured_image }}}
                     <span class="recipe-date">{{ recipeDate date }}</span>
-                    <div class="tag-cloud">{{{ tagCloud }}}</div>
                     <div class="card">
-                        <ul class="table-view">
-                            <li class="table-view-cell media">
-                                <div id="recipe-content-tpl" class="media-body">
-                                    {{{ parsedContent content.rendered }}}
-                                </div>
-                            </li>
-                        </ul>
+                        <div id="recipe-content-tpl" class="media-body">
+                            {{{ parsedContent content.rendered }}}
+                        </div>
+                        <div class="tag-cloud">
+                        <p>Tags:</p>
+                            {{{ tagCloud }}}
+                        </div>
                     </div>
                 </div>
 
@@ -164,27 +163,27 @@
     </div>
 
     <div class="menu">
-        <a href="#">
+        <a href="#" id="home">
             <div class="menu-option home">
                 <img src="img/home.svg">
             </div>
         </a>
-        <a href="#search">
+        <a href="#search" id="search">
             <div class="menu-option search">
                 <img src="img/search.svg">
             </div>
         </a>
-        <a href="#favs">
+        <a href="#favs" id="favs">
             <div class="menu-option favs">
                 <img src="img/favs.svg">
             </div>
         </a>
-        <a href="#about">
+        <a href="#about" id="about">
             <div class="menu-option about-me">
                 <img src="img/about-me.svg">
             </div>
         </a>
-        <a href="#contact">
+        <a href="#contact" id="contact">
             <div class="menu-option contact">
                 <img src="img/contact.svg">
             </div>
