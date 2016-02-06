@@ -344,6 +344,13 @@ div.social-toggle-content {
   margin-left: 10px;
 }
 
+span.recipe-date {
+    width: auto;
+    clear: both;
+    padding-left: 10px;
+    font-size: 10px;
+}
+
 .social-sharing .share-link.toggle-link {
   margin-left: 0px;
 }
