@@ -39,6 +39,7 @@ h1.title {
   font-size: 27px;
   font-family: "oswald";
   font-weight: normal;
+  padding: 0 10px 0 10px;
 }
 h4, h5, h6
 {
@@ -333,13 +334,17 @@ div.social-sharing p{
   font-family: "oswald";
 }
 
+div.social-toggle-content {
+  display: none;
+}
+
 .social-sharing .share-link,
 .social-sharing .share-link span {
   float: left;
   margin-left: 10px;
 }
 
-.social-sharing .share-link.facebook {
+.social-sharing .share-link.toggle-link {
   margin-left: 0px;
 }
 
