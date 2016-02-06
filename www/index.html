@@ -111,7 +111,12 @@
                     </h1>
 
                     <div class="social-sharing">
-                        <p>Compartir:</p>
+                        <p class="share-link toggle-link">
+                            <a  href="#">
+                                <img src="img/share.svg" title="Share"></img>
+                            </a>
+                        </p>
+                        <div class="social-toggle-content">
                             <p class="share-link facebook">
                                 <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u={{ link }}&title={{ title.rendered }}">
                                     <img src="img/facebook.svg" title="Facebook"></img>
@@ -132,7 +137,8 @@
                                     <img src="img/googleplus.svg"></span>
                                 </a>
                             </p>
-                            {{{ recipeFav id }}}
+                        </div>
+                        {{{ recipeFav id }}}
                     </div>
 
                 </header>
