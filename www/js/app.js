@@ -16,6 +16,14 @@
      return moment(date).format("DD [de] MMMM [de] YYYY");
     });
 
+    Handlebars.registerHelper('tagCloud', function() {
+      var taxonomies = _([this.tags,  this.categories]).flatten();
+      taxonomies = _((taxonomies)).pluck("name").sort();
+      return _(taxonomies).map(function(tag){
+        return '<span class="tag">' + tag + '</span>';
+      }).join("");
+    });
+
     Handlebars.registerHelper('parsedContent', function(content_text) {
       content_text = content_text.replace("src=\"\/\/", "src=\"https:\/\/");
       content_text = content_text.replace(/(youtube.*width=\")(.*)(\" hei.*)/,"$198%$3");
