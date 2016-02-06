@@ -459,3 +459,17 @@ span.tag {
   margin-bottom: 10px;
   font-size: 12px;
 }
+
+div#recipe-content-tpl {
+  padding: 0 10px 0 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+}
+
+.gallery .gallery-item {
+  width: 100%;
+}
+
+
