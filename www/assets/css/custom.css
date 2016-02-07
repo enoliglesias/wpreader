@@ -54,6 +54,7 @@ p
 }
 a, a:link, a:active, a:visited, a:hover
 {
+  outline: none;
   color: #000;
   text-decoration: none;
   font-size: 16px;
