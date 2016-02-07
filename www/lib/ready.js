@@ -96,7 +96,9 @@ $(document).ready(function() {
 
   $(document).on("click", "#setting-info", function(e){
     e.preventDefault();
-    navigator.notification.alert("Aplicación móvil del blog Begin Vegan Begun.\nVersión: 1.0.0", BVB.emptyFunction, "Sobre la aplicación", "Aceptar");
+    navigator.notification.alert("Begin Vegan Begun es una marca registrada.\n \
+      Versión: 1.0.0\n \
+      Codename: Allium", BVB.emptyFunction, "Sobre la aplicación", "Aceptar");
   });
 
 });
