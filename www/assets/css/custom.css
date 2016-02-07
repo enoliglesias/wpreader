@@ -231,6 +231,10 @@ ul.recipe-table li {
   overflow-y: hidden;
 }
 
+#page img {
+  max-width: 100%;
+}
+
 #form-div {
   float: left;
   width: 100%;
