@@ -81,6 +81,10 @@ span.settings {
   right: 10px;
 }
 
+.media-body {
+  position: relative;
+}
+
 .content,
 .footer
 {
@@ -120,6 +124,9 @@ img.list-image-recipe,
 
 span.fav-star {
   margin-left: 10px;
+  position: absolute;
+  right: 0;
+  top: -5px;
 }
 
 p.title {
@@ -143,12 +150,12 @@ p.info {
   float: right;
 }
 
-img#fav-star-img {
+img.fav-star-img {
     height: 25px;
     position: relative;
 }
 
-.recipe.detail img#fav-star-img {
+.recipe.detail img.fav-star-img {
     top: 2px;
 }
 
@@ -334,6 +341,7 @@ div.social-sharing {
 div.social-sharing span.fav-star {
     float: right;
     margin-right: 10px;
+    position: inherit;
 }
 
 div.social-sharing p{
@@ -483,5 +491,3 @@ div#recipe-content-tpl {
 .gallery .gallery-item {
   width: 100%;
 }
-
-
