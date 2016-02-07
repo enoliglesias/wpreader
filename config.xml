@@ -15,7 +15,6 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <platform name="android">
-        <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
         <allow-intent href="market:*" />
         <access origin="*" />
         <allow-intent href="http://*/*" />
