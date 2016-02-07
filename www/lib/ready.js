@@ -29,9 +29,9 @@ $(document).ready(function() {
     var recipe_id = $(this).data("recipe-id");
     var fav_span = BVB.getFavSpan(recipe_id);
     $("span[data-recipe-id=" + recipe_id + "]").replaceWith(fav_span);
-    $("#fav-star-img-" + recipe_id).animate({height: "18px"}, 150);
-    $("#fav-star-img-" + recipe_id).animate({height: "33px"}, 150);
-    $("#fav-star-img-" + recipe_id).animate({height: "25px"}, 150);
+    $("#fav-star-img-" + recipe_id).animate({height: "18px"}, 120);
+    $("#fav-star-img-" + recipe_id).animate({height: "33px"}, 120);
+    $("#fav-star-img-" + recipe_id).animate({height: "25px"}, 120);
   });
 
   $(document).on("click", "#send_contact_form", function(e){
