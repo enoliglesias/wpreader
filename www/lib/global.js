@@ -9,9 +9,9 @@ var menu_options = ["home", "search", "favs", "about-me", "contact"];
 var current_page = 1;
 
 Storage.prototype.setObj = function(key, obj) {
-  return this.setItem(key, JSON.stringify(obj));
+  return this.setItem(key, LZString.compress(JSON.stringify(obj)));
 };
 
 Storage.prototype.getObj = function(key) {
-  return JSON.parse(this.getItem(key));
+  return JSON.parse(LZString.decompress(this.getItem(key)) || null);
 };
