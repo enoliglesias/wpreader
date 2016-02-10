@@ -122,6 +122,10 @@ img.list-image-recipe,
   height: auto;
 }
 
+p.image.about {
+  padding: 0 10px;
+}
+
 span.fav-star {
   margin-left: 10px;
   position: absolute;
@@ -146,7 +150,7 @@ p.info {
   font-size: 16px;
 }
 
-.recipe-row span.fav-star{
+.recipe-row span.fav-star {
   float: right;
 }
 
@@ -169,6 +173,10 @@ ul.table-view.recipe-table {
   padding: 0;
 }
 
+ul.recipe-table.large {
+  margin-top: 40px;
+}
+
 ul.recipe-table.large li {
   padding: 0px 10px;
   margin-bottom: 50px;
@@ -179,13 +187,17 @@ ul.recipe-table.mini li{
 }
 
 .page-detail p:not(.image){
-  padding-left: 10px;
+  padding: 0px 10px;
 }
 
 ul.recipe-table li {
   background-color: #FFF;
   font-family: "oswald";
   text-transform: uppercase;
+}
+
+.content-image {
+  padding: 0px 10px;
 }
 
 .center {
