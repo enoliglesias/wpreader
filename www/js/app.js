@@ -20,7 +20,7 @@
       var taxonomies = _([this.tags,  this.categories]).flatten();
       taxonomies = _((taxonomies)).pluck("name").sort();
       return _(taxonomies).map(function(tag){
-        return '<a href="#search/' + tag + '" class="tag-link" data-tag-name="' + tag + '"><span class="tag">' + tag + '</span></a>';
+        return '<a href="#search/#' + tag + '" class="tag-link" data-tag-name="' + tag + '"><span class="tag">' + tag + '</span></a>';
       }).join("");
     });
 
