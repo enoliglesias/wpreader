@@ -36,6 +36,7 @@ var RecipeService = function() {
             return text.toLowerCase().indexOf(search_text.toLowerCase()) > -1;
         });
         // Return no recipes when search key is empty
+        window.history.replaceState({}, "search", "#search/" + searchKey);
         results = search_text.length === 0 ? [] : results;
         deferred.resolve(results);
         return deferred.promise();
