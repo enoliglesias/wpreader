@@ -8,16 +8,6 @@ $(document).ready(function() {
     }
   });
 
-  $(document).on("click", ".tag-link", function(e){
-    e.preventDefault();
-    var tag = $(this).data("tag-name");
-    $("#search")[0].click();
-    setTimeout(function(){
-      $(".search-key").attr("value", "#" + tag);
-      $(".search-key").keyup();
-     }, 100);
-  });
-
   $(document).on("click", ".toggle-link", function(e) {
     e.preventDefault();
     var image_url = $(".social-toggle-content").is(':visible') ? "img/share.svg" : "img/share_active.svg";
