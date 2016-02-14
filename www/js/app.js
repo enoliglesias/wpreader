@@ -26,7 +26,7 @@
 
     Handlebars.registerHelper('parsedContent', function(content_text) {
       content_text = content_text.replace("src=\"\/\/", "src=\"https:\/\/");
-      content_text = content_text.replace(/(youtube.*width=\")(.*)(\" hei.*)/,"$198%$3");
+      content_text = content_text.replace(/(youtube.*width=\")(.*)(\" hei.*)/,"$1100%$3");
       return content_text;
     });
 
