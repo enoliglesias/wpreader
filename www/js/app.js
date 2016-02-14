@@ -82,6 +82,14 @@
         $('#content').load("search.html");
       });
 
+      router.addRoute('search/:tag', function(tag) {
+        $('#content').load("search.html");
+        setTimeout(function(){
+          $(".search-key").attr("value", "#" + tag);
+          $(".search-key").keyup();
+         }, 100);
+      });
+
       router.addRoute('about', function() {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         BVB.activateMenu("about-me");
