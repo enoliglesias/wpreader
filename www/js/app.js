@@ -85,7 +85,7 @@
       router.addRoute('search/:tag', function(tag) {
         $('#content').load("search.html");
         setTimeout(function(){
-          $(".search-key").attr("value", "#" + tag);
+          $(".search-key").attr("value", tag);
           $(".search-key").keyup();
          }, 100);
       });
