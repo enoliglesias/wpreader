@@ -84,6 +84,7 @@
 
       router.addRoute('search/:tag', function(tag) {
         $('#content').load("search.html");
+        BVB.activateMenu("search");
         setTimeout(function(){
           $(".search-key").attr("value", tag);
           $(".search-key").keyup();
