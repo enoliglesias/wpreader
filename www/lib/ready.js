@@ -59,10 +59,6 @@ $(document).ready(function() {
 
 //######## SETTINGS
 
-  $(document).on("click", "#setting-close", function(e){
-    e.preventDefault();
-    navigator.app.exitApp();
-  });
 
   function onReset(buttonIndex) {
     if (buttonIndex === 1) {
@@ -71,6 +67,22 @@ $(document).ready(function() {
       });
     }
   }
+
+  function onClose(buttonIndex) {
+    if (buttonIndex === 1) {
+      navigator.app.exitApp();
+    }
+  }
+
+  $(document).on("click", "#setting-close", function(e){
+    e.preventDefault();
+    navigator.notification.confirm(
+        '¿Deseas cerrar la aplicación?',
+         onClose,
+        'Cerrar aplicación',
+        ['Cerrar','Cancelar']
+    );
+  });
 
   $(document).on("click", "#setting-reset", function(e){
     e.preventDefault();
@@ -81,8 +93,6 @@ $(document).ready(function() {
         ['Aceptar','Cancelar']
     );
   });
-
-
 
   $(document).on("click", "#setting-info", function(e){
     e.preventDefault();
