@@ -72,6 +72,7 @@
           service.findById(parseInt(id)).done(function(recipe) {
             document.body.scrollTop = document.documentElement.scrollTop = 0;
             BVB.deactivateAllMenu();
+            BVB.deactivateSettings();
             $('#content').html(new RecipeView(recipe).render().$el);
           });
       });
