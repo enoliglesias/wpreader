@@ -96,7 +96,7 @@ $(document).ready(function() {
 
   $(document).on("click", "#setting-info", function(e){
     e.preventDefault();
-    navigator.notification.alert("Begin Vegan Begun es una marca registrada.\nVersión: 1.0.0\nCodename: Allium", BVB.emptyFunction, "Sobre la aplicación", "Aceptar");
+    navigator.notification.alert("Begin Vegan Begun es una marca registrada.\nVersión: 1.0.4\nCodename: Allium", BVB.emptyFunction, "Sobre la aplicación", "Aceptar");
   });
 
 });
