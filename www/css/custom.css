@@ -248,6 +248,7 @@ ul.recipe-table li {
   width: 100%;
   padding-bottom: 60px;
   float: left;
+  overflow-x: hidden;
 }
 
 #page img {
