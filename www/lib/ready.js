@@ -51,7 +51,7 @@ $(document).ready(function() {
              },
     })
     .always(function(){
-      $("input[type=text], textarea").val("");
+      $("input[type=text],input[type=email], textarea").val("");
       BVB.hideSpinner();
       navigator.notification.alert("¡Tu mensaje ha sido enviado, gracias!", BVB.emptyFunction, "Mensaje enviado", "Aceptar");
     });
@@ -96,7 +96,7 @@ $(document).ready(function() {
 
   $(document).on("click", "#setting-info", function(e){
     e.preventDefault();
-    navigator.notification.alert("Begin Vegan Begun es una marca registrada.\nVersión: 1.0.4\nCodename: Allium", BVB.emptyFunction, "Sobre la aplicación", "Aceptar");
+    navigator.notification.alert("Begin Vegan Begun es una marca registrada.\nVersión: 1.0.5\nCodename: Allium", BVB.emptyFunction, "Sobre la aplicación", "Aceptar");
   });
 
 });
