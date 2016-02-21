@@ -9,5 +9,6 @@ var Settings = {
   wp_posts_endpoint: "modify this",
   wp_images_endpoint: "modify this",
   register_devices: false,
-  google_analitytics_id: "UA-XXXX-YY"
+  google_analitytics_id: "UA-XXXX-YY",
+  google_sender_id: "123456789"
 };
