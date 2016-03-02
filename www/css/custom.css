@@ -231,6 +231,8 @@ ul.recipe-table li {
   font-size: 55px;
   line-height: 1;
   text-transform: uppercase;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 100%;
 }
