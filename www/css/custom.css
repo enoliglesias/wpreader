@@ -1,5 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
-@import url(https://fonts.googleapis.com/css?family=Oswald);
+@font-face {
+    font-family: "Oswald";
+    src: url(../fonts/Oswald.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url(../fonts/SourceSansPro.ttf);
+}
 
 html, body
 {
