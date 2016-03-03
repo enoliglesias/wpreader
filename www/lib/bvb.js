@@ -66,7 +66,7 @@ var BVB = (function () {
     }
 
     function deactivateMenu(menu_point){
-        $(".menu-option." + menu_point + " > a > img").attr("src", "img/" + menu_point + ".svg");
+        $(".menu-option." + menu_point).removeClass("active");
     }
 
     function deactivateAllMenu(){
@@ -82,7 +82,7 @@ var BVB = (function () {
     function activateMenu(menu_point){
         deactivateAllMenu();
         deactivateSettings();
-        $(".menu-option." + menu_point + " > a > img").attr("src", "img/" + menu_point + "_active.svg");
+        $(".menu-option." + menu_point).addClass("active");
     }
 
     function activateSettings(){
