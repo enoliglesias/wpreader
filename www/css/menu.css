@@ -7,17 +7,47 @@
   border-top: 1px solid #757575;
 }
 
-.menu div {
+.menu .menu-option {
   width: 20%;
-  float: left;
+  height: 50px;
+  display: inline-block;
+  margin: 0 -0.285em 0 0;
   text-align: center;
-  padding-top: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 32px;
+}
+.menu .menu-option.home{
+  background-image: url('../img/home.svg');
+}
+.menu .menu-option.contact{
+  background-image: url('../img/contact.svg');
+}
+.menu .menu-option.search{
+  background-image: url('../img/search.svg');
+}
+.menu .menu-option.favs{
+  background-image: url('../img/favs.svg');
+}
+.menu .menu-option.about-me{
+  background-image: url('../img/about-me.svg');
 }
 
+.menu .menu-option.home.active{
+  background-image: url('../img/home_active.svg');
+}
+.menu .menu-option.contact.active{
+  background-image: url('../img/contact_active.svg');
+}
+.menu .menu-option.search.active{
+  background-image: url('../img/search_active.svg');
+}
+.menu .menu-option.favs.active{
+  background-image: url('../img/favs_active.svg');
+}
+.menu .menu-option.about-me.active{
+  background-image: url('../img/about-me_active.svg');
+}
 .menu div.selected {
   background-color: #e5e5e5;
-}
-
-.menu-option img {
-  height: 32px;
 }
