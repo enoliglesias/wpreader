@@ -40,10 +40,22 @@ As you can see, the names and references, is always about recipes. It's because 
 ## Screenshots
 
 You can take a look at the application that I made with this proyect. Is published it in the Play Store and iTunes (soon).
+<p>
+<img src="https://lh3.googleusercontent.com/DFZ4-xq_XXk5sZEyGd9AoCCX4ctE_WAM7a__EitV8Iof-1ukhbDMvVRvcySihaxFy3E=h900-rw" height="400px"/>
 
+<img src="https://lh3.googleusercontent.com/VCO3o4UyTtctIvuXSaLYvNn43JvGoEFkZ_OBhCYh4Vj9wiDh4KkSHs1czUp_uXjXQfOW=h900-rw" height="400px"/>
+
+<img src="https://lh3.googleusercontent.com/9Z1CgoZzn4n-zRXZwbZgiGHcRl7KIiNtm53KA3sOVJ_TWMqwwMj4q8IuthXUwG6Pkvea=h900-rw" height="400px"/>
+
+<img src="https://lh3.googleusercontent.com/vF5rR75X3gCXyvZ9nQBkwMzfsCF06mgip4X2Exb2_LvkPhOMacqj1_Q0nVUkrxGz8FEx=h900-rw" height="400px"/>
+
+<img src="https://lh3.googleusercontent.com/hnDprroP4BeoL6X3fo9nPQedf3YtEZDrkFhDv5pGEBMitZjGvNZHD5AHbzvais2lTSUr=h900-rw" height="400px"/>
+
+<img src="https://lh3.googleusercontent.com/iLleZ8LFXtvcpRR0Yxw42Pn-QidctkpbMtiJ2GAgzIw7lsY4AEJElWKikSfMWYI4IGk=h900-rw" height="400px"/>
+
+</p>
+<br/>
 <a target="_blank" href="https://play.google.com/store/apps/details?id=com.enoliglesias.bvb&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img width="250px" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" /></a>
-
-(Cooming soon)
 
 ## TODO
 
