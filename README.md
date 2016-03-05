@@ -13,11 +13,11 @@ As you can see, the names and references, is always about recipes. It's because 
     - org.apache.cordova.device 0.3.0 "Device"
 * Install the Wordpress API plugin in your blog. [WP Rest API](http://v2.wp-api.org/). 
 * Add CORS headers to API. Go to file `rest-api/core/wp-includes/rest-api/rest-functions.php` and set:
-    ```
+```
      header( 'Access-Control-Allow-Headers: accept, access-control-allow-headers, access-control-allow-origin' );
      
      header( 'Access-Control-Allow-Origin: *' );
-    ```
+```
 * Allow query post by date in the API. We need this info in the app. Go to file `rest-api/core/wp-includes/functions.php` and add:
 ```
      function my_rest_query_vars( $valid_vars ) {
