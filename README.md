@@ -34,6 +34,7 @@ As you can see, the names and references, is always about recipes. It's because 
 
 * Configure settings.js
 * Be carefully and remember to change any reference to [Begin Vegan Begun™](http://beginveganbegun.es) to your blog's name. [Begin Vegan Begun™](http://beginveganbegun.es) is a trade mark.
+* Add the platforms you want by `cordova platform add [platform]` and configure them as you wish.
 * Run `cordova build [platform]`
 * Have fun!
 
