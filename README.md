@@ -40,7 +40,7 @@ As you can see, the names and references, is always about recipes. It's because 
 
 ## Screenshots
 
-You can take a look at the application that I made with this proyect. Is published it in the Play Store and iTunes (soon).
+You can take a look at the application that I made with this proyect. It's published in the Play Store and iTunes (soon).
 <p>
 <img src="https://lh3.googleusercontent.com/DFZ4-xq_XXk5sZEyGd9AoCCX4ctE_WAM7a__EitV8Iof-1ukhbDMvVRvcySihaxFy3E=h900-rw" height="400px"/>
 
