@@ -39,6 +39,10 @@ As you can see, the names and references, is always about recipes. It's because 
 
 ## Screenshots
 
+You can take a look at the application that I made with this proyect. Is published it in the Play Store and iTunes (soon).
+
+<a target="_blank" href="https://play.google.com/store/apps/details?id=com.enoliglesias.bvb&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img width="250px" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" /></a>
+
 (Cooming soon)
 
 ## TODO
