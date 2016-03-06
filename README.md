@@ -2,7 +2,7 @@
 
 Cordova project to read wordpress blog and generate a cross platform mobile app. 
 
-As you can see, the names and references, is always about recipes. It's because we use this repo to build the mobile app for the blog [Begin Vegan Begun™](http://beginveganbegun.es)
+As you can see, the names and references, it's always about recipes. It's because we use this repo to build the mobile app for the blog [Begin Vegan Begun™](http://beginveganbegun.es)
 
 ## Installation
 
@@ -33,7 +33,7 @@ As you can see, the names and references, is always about recipes. It's because 
 ```
 
 * Configure settings.js
-* Be carefully and remember to change any reference to [Begin Vegan Begun™](http://beginveganbegun.es) to your blog's name. [Begin Vegan Begun™](http://beginveganbegun.es) is a trade mark.
+* Be careful and remember to change each reference to [Begin Vegan Begun™](http://beginveganbegun.es) to your blog's name. [Begin Vegan Begun™](http://beginveganbegun.es) is a trade mark.
 * Add the platforms you want by `cordova platform add [platform]` and configure them as you wish.
 * Run `cordova build [platform]`
 * Have fun!
