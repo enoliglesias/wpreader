@@ -57,7 +57,7 @@ You can take a look at the application that I made with this proyect. It's publi
 </p>
 <br/>
 
-<a target="_blank" href="https://play.google.com/store/apps/details?id=com.enoliglesias.bvb&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img width="250px" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" /></a>
+<a target="_blank" href="https://play.google.com/store/apps/details?id=com.enoliglesias.bvb"><img width="250px" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" /></a>
 
 <a target="_blank" href="https://itunes.apple.com/es/app/begin-vegan-begun-recetas/id1090760348?mt=8"><img width="250px" alt="Get it on App Store" src="http://2.bp.blogspot.com/-tT32eKRfnJM/U7Gtd8BduII/AAAAAAAACg0/Hs25zg4OQCc/s1600/app-store.jpg" /></a>
 
