@@ -1,5 +1,8 @@
 # WP Reader
 
+:warning: **Since the rest-api is now an include, not a plugin, and the specification had change, this repository is DEPRECATED. Do not use it to create your mobile app.** I'm working in a react-native version with the new WP API. I'll link it here when it's finished. :warning:
+
+
 Cordova project to read wordpress blog and generate a cross platform mobile app. 
 
 As you can see, the names and references, it's always about recipes. It's because we use this repo to build the mobile app for the blog [Begin Vegan Begun™](http://beginveganbegun.es)
